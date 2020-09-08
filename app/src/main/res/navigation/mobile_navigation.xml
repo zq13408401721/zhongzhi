@@ -12,14 +12,26 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.app.zhongying.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_shop"
+        android:name="com.app.zhongying.ui.live.LiveFragment"
+        android:label="@string/title_shop"
+        tools:layout="@layout/fragment_live" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.app.zhongying.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_ticketing"
+        android:name="com.app.zhongying.ui.live.LiveFragment"
+        android:label="@string/title_ticketing"
+        tools:layout="@layout/fragment_live" />
+
+    <fragment
+        android:id="@+id/navigation_live"
+        android:name="com.app.zhongying.ui.live.LiveFragment"
+        android:label="@string/title_live"
+        tools:layout="@layout/fragment_live" />
+
+    <fragment
+        android:id="@+id/navigation_own"
+        android:name="com.app.zhongying.ui.own.OwnFragment"
+        android:label="@string/title_own"
+        tools:layout="@layout/fragment_own" />
 </navigation>
