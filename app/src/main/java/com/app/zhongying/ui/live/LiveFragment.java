@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import com.app.zhongying.R;
 
 public class LiveFragment extends Fragment {
-    ///ss
     public LiveFragment(){}
 
     @Nullable
@@ -20,4 +19,5 @@ public class LiveFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_live, container, false);
     }
+    //111
 }
