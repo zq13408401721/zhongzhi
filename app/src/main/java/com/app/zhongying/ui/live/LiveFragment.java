@@ -15,16 +15,15 @@ public class LiveFragment extends Fragment {
 
     public LiveFragment(){}
 
-    /**
-     *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
-     * @return
-     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_live, container, false);
+        View view = inflater.inflate(R.layout.fragment_live, container, false);
+        initView(view);
+        return view;
+    }
+
+    private void initView(View view) {
+
     }
 }
