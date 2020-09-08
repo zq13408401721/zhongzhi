@@ -27,19 +27,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //1234562345234562345234512345qwsdfxdexr
-                String a = "13we";
-                String ab = "13we";
-                String abc = "13we";
-                String abdc = "13we3";
-                String asbdc = "13we3";
-                String aasbdc = "13we3";
-                return true;
-            }
-        });
+
     }
 
 }
