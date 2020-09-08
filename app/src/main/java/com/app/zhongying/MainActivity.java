@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
         //fsfsfsfsd李靖保
+        //rgtrfgg
+
     }
 
 }
