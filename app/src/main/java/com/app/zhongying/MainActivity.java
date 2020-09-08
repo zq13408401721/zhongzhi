@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //12345623452345623452345
+                //1234562345234562345234512345qwsdfxdexr
+                String a = "13we";
                 return true;
             }
         });
