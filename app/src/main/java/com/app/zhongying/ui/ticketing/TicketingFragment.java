@@ -23,6 +23,6 @@ public class TicketingFragment extends Fragment {
         // Inflate the layout for this fragment
         View inflate = inflater.inflate(R.layout.fragment_ticketing, container, false);
         return inflate;
-        //天生有才必有用
+
     }
 }
