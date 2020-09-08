@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 //1234562345234562345234512345qwsdfxdexr
                 String a = "13we";
+                String ab = "13we";
                 return true;
             }
         });
