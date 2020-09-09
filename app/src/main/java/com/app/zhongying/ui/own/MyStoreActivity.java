@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.own.activities.MessageActivity;
 import com.app.zhongying.ui.own.personal_stores.Personal_StoresActivity;
 
 import butterknife.BindView;
@@ -72,7 +73,7 @@ public class MyStoreActivity extends AppCompatActivity {
     private void initView() {
         toolbarTitle.setText("我的店铺");
     }
-    @OnClick({R.id.iv_back,R.id.iv_right_order,R.id.tv_obligation,R.id.tv_send,
+    @OnClick({R.id.iv_back,R.id.rv_msg,R.id.iv_right_order,R.id.tv_obligation,R.id.tv_send,
             R.id.tv_evaluate,R.id.tv_harvest,R.id.tv_after,R.id.iv_right_product,
             R.id.tv_add,R.id.tv_sell,R.id.rv_look_myStore, R.id.tv_sold_out,R.id.tv_warehouse,R.id.tv_out_of_print})
     public void onClickListener(View view){
@@ -85,6 +86,9 @@ public class MyStoreActivity extends AppCompatActivity {
                 break;
             case R.id.rv_look_myStore:
                 startActivity(new Intent(MyStoreActivity.this,Personal_StoresActivity.class));
+                break;
+            case R.id.rv_msg:
+                startActivity(new Intent(MyStoreActivity.this, MessageActivity.class));
                 break;
         }
     }

@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.app.zhongying.R;
 import com.app.zhongying.activity.own.Modify_userActivity;
+import com.app.zhongying.ui.own.activities.MessageActivity;
 import com.app.zhongying.ui.own.activities.MyLoveActivity;
 import com.app.zhongying.ui.own.mywallet.MyWalletActivity;
 
