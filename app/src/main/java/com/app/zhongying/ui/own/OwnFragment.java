@@ -43,8 +43,8 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_own, container, false);
-
+        View inflate = inflater.inflate(R.layout.fragment_own, container, false);
+        return inflate;
     }
 
     @Override
@@ -180,6 +180,7 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面消息中心跳转
             case R.id.xiaoxi:
+                startActivity(new Intent(getContext(), MessageActivity.class));
                 break;
             //我的页面我的足迹跳转
             case R.id.zuji:
@@ -204,6 +205,4 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
         }
     }
-
-
 }
