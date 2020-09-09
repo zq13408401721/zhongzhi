@@ -11,9 +11,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".ui.MovieActivity"/>
+        <activity android:name=".ui.ticketing.ScenicSpotActivity"/>
+        <activity android:name=".ui.ticketing.ShowTicketActivity"/>
         <activity
             android:name=".ui.HotelActivity"
-            android:name=".ui.ticketing.ScenicSpotActivity"
+
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
