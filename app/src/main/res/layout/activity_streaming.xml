@@ -171,9 +171,10 @@
             app:layout_constraintRight_toLeftOf="@+id/stream_praise"
             android:layout_width="50dp"
             android:layout_height="55dp"/>
-        <com.app.zhongying.common.LoveLayout
-            android:id="@+id/stream_love"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"/>
+
+    <com.app.zhongying.common.LoveLayout
+        android:id="@+id/stream_love"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
