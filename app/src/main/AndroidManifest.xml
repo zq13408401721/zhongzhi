@@ -15,6 +15,7 @@
         <activity android:name=".ui.ticketing.activity.HotelActivity"/>
         <activity android:name=".ui.ticketing.activity.ScenicSpotActivity"/>
         <activity android:name=".ui.ticketing.activity.ShowTicketActivity"/>
+        <activity android:name=".ui.ticketing.ReserveActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
