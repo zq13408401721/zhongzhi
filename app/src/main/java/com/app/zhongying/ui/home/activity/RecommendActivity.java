@@ -64,7 +64,12 @@ public class RecommendActivity extends AppCompatActivity {
         ctl = (LinearLayout) findViewById(R.id.ctl);
         nv = (NavigationView) findViewById(R.id.nv);
         dl = (DrawerLayout) findViewById(R.id.dl);
-
+        img_fanhui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         img_cehua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
