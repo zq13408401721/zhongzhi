@@ -6,8 +6,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -34,7 +32,6 @@
         <activity android:name=".ui.own.SettingsActivity" />
         <activity android:name=".ui.own.FillInformationActivity"></activity>
         <activity android:name=".ui.own.activities.MessageActivity"></activity>
-        <activity android:name=".MainActivity"
         <activity android:name=".ui.ticketing.activity.MovieActivity"/>
         <activity android:name=".ui.ticketing.activity.HotelActivity"/>
         <activity android:name=".ui.ticketing.activity.ScenicSpotActivity"/>
