@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.own.ServiceActivity"/>
+        <activity android:name=".activity.own.Modify_DateActivity" />
+        <activity android:name=".activity.own.Modify_nameActivity" />
+        <activity android:name=".activity.own.ResumeActivity" />
+        <activity
+            android:name=".activity.own.Modify_userActivity" />
         <activity android:name=".ui.own.ProductManageActivity"></activity>
         <activity android:name=".ui.own.MyStoreActivity"></activity>
 
