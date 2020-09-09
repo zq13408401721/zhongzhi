@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3EFEF"
+    android:orientation="vertical"
+    tools:context=".ui.own.SettingsActivity">
+
+    <include
+        android:id="@+id/se_Finish"
+        layout="@layout/own_settings_tool" />
+
+    <LinearLayout
+        android:layout_below="@+id/se_Finish"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/dizhi"
+            layout="@layout/own_settings" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E6DBDB" />
+
+        <include
+            android:id="@+id/qingli"
+            layout="@layout/own_settingsn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E6DBDB" />
+
+        <include
+            android:id="@+id/yinsi"
+            layout="@layout/own_settings" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E6DBDB" />
+
+        <include
+            android:id="@+id/yijian"
+            layout="@layout/own_settings" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E6DBDB" />
+
+        <include
+            android:id="@+id/banben"
+            layout="@layout/own_settingsn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E6DBDB" />
+
+        <include
+            android:id="@+id/tui_login"
+            layout="@layout/own_settingsn" />
+    </LinearLayout>
+
+
+</RelativeLayout>
