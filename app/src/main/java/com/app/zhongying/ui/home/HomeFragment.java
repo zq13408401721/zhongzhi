@@ -16,18 +16,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.home.activity.SeekActivity;
 import com.app.zhongying.activity.DetailsActivity;
 import com.app.zhongying.activity.EventAcitivity;
 import com.app.zhongying.activity.MoveActivity;
 import com.app.zhongying.activity.PeopleActivity;
-import com.app.zhongying.activity.RecommendActivity;
-import com.app.zhongying.activity.SeekActivity;
 import com.app.zhongying.activity.WenBrigadeAcitivity;
 import com.app.zhongying.activity.WenCreateActivity;
 import com.app.zhongying.adapter.FragmentAdapter;
 import com.app.zhongying.fragment.DynamicFragment;
 import com.app.zhongying.fragment.ThreeFragment;
 import com.app.zhongying.fragment.TwoFragment;
+import com.app.zhongying.ui.home.activity.RecommendActivity;
 import com.google.android.material.tabs.TabLayout;
 import com.youth.banner.Banner;
 
