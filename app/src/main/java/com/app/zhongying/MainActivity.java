@@ -42,4 +42,9 @@ public class MainActivity extends AppCompatActivity {
         //click
     }
 
+    //初始化数据
+    private void initData(){
+
+    }
+
 }
