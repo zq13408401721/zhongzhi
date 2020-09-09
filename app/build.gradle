@@ -99,4 +99,8 @@ dependencies {
    // implementation 'com.android.support:multidex:1.0.1'
     implementation 'liji.library.dev:citypickerview:1.1.0'
 
+    implementation 'com.hedgehog.ratingbar:app:1.1.2'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.chrisbanes.photoview:library:+'
 }
