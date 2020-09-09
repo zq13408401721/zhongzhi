@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.zhongying.R;
+import com.app.zhongying.adapter.MessageRclAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,6 +52,10 @@ public class InteractionFragment extends Fragment {
 
     private void initView() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        MessageRclAdapter messageRclAdapter = new MessageRclAdapter(getContext());
+        recyclerView.setAdapter(messageRclAdapter);
+        //添加Android自带的分割线
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
     }
 
     @Override

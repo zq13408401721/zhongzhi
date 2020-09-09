@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/cardview_light_background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -20,6 +21,17 @@
         app:layout_constraintLeft_toRightOf="@id/img_head"
         android:text="阳阳的店"
         android:textSize="@dimen/sp_17"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:text="亲亲，我们这边暂不支持退款"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintLeft_toRightOf="@id/img_head"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
