@@ -19,8 +19,6 @@
         <activity android:name=".ui.home.activity.SeekActivity"/>
         <activity android:name=".ui.own.activities.MyLoveActivity"/>
         <activity android:name=".ui.home.activity.ArticledetailsActivity"/>
-        <activity
-            android:name=".MainActivity"
         <activity android:name=".ui.own.personal_stores.Personal_StoresActivity"></activity>
         <activity android:name=".activity.own.ServiceActivity" />
         <activity android:name=".activity.own.Modify_DateActivity" />
@@ -41,10 +39,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.own.activities.MyLoveActivity"
-            android:label="@string/app_name">
         </activity>
     </application>
 
