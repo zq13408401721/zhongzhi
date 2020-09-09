@@ -1,5 +1,6 @@
 package com.app.zhongying.ui.own;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zhongying.R;
 import com.app.zhongying.ui.adapter.EvaluateAdapter;
+import com.app.zhongying.ui.fragment.EvaluateActivity;
 
 public class OwnFragment extends Fragment {
 
@@ -40,7 +42,7 @@ public class OwnFragment extends Fragment {
     }
 
     private void initView(View view) {
-      /*  evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
+       /* evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
         evaluate_zuzu_time_tv = view.findViewById(R.id.evaluate_zuzu_time_tv);
         evaluate_zuzu_img = view.findViewById(R.id.evaluate_zuzu_img);
         evaluate_zuzu_contont_tv = view.findViewById(R.id.evaluate_zuzu_contont_tv);
@@ -52,8 +54,14 @@ public class OwnFragment extends Fragment {
 
         evaluate_zuzu_rv.setLayoutManager(new GridLayoutManager(getActivity(),2));
         EvaluateAdapter evaluateAdapter = new EvaluateAdapter(getActivity());
-        evaluate_zuzu_rv.setAdapter(evaluateAdapter);*/
+        evaluate_zuzu_rv.setAdapter(evaluateAdapter);
 
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), EvaluateActivity.class);
+                startActivity(intent);
+            }
+        });*/
     }
 }

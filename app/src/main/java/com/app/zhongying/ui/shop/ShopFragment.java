@@ -1,24 +1,29 @@
 package com.app.zhongying.ui.shop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zhongying.R;
-import com.app.zhongying.ui.adapter.AftersaleAdapter;
+import com.app.zhongying.ui.adapter.ShoppingActivity;
+
+import butterknife.BindView;
 
 public class ShopFragment extends Fragment {
 
 
+    @BindView(R.id.btn_click)
+    Button btnClick;
     private RecyclerView fragment_aftersale_rv;
 
     public ShopFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -30,9 +35,14 @@ public class ShopFragment extends Fragment {
     }
 
     private void initView(View inflate) {
-        /*fragment_aftersale_rv = inflate.findViewById(R.id.fragment_aftersale_rv2);
-        fragment_aftersale_rv.setLayoutManager(new LinearLayoutManager(getActivity()));
-        AftersaleAdapter aftersaleAdapter = new AftersaleAdapter(getActivity());
-        fragment_aftersale_rv.setAdapter(aftersaleAdapter);*/
+
+        btnClick = inflate.findViewById(R.id.btn_click);
+
+        btnClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ShoppingActivity.class));
+            }
+        });
     }
 }
