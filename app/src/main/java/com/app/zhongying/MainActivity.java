@@ -32,10 +32,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
 
-                switch (0){
-                    case 0:
-                        break;
-                }
             }
         });
         String.valueOf(0);//uifadhiuahiup
@@ -48,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     //测试
     public void checkOut(){
-
+        //初始化数据的方法
     }
 
 }
