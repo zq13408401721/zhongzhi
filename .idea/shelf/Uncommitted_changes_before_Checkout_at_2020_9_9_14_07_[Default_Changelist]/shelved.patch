@@ -1,0 +1,275 @@
+Index: app/src/main/res/layout/broadcast_layout.xml
+===================================================================
+--- app/src/main/res/layout/broadcast_layout.xml	(revision ec8229e628725ea22e58947021fd8cd54a442948)
++++ app/src/main/res/layout/broadcast_layout.xml	(revision ec8229e628725ea22e58947021fd8cd54a442948)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent">
+-
+-    <ImageView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"colorPrimary\">#6200EE</color>\r\n    <color name=\"colorPrimaryDark\">#3700B3</color>\r\n    <color name=\"colorAccent\">#03DAC5</color>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision ec8229e628725ea22e58947021fd8cd54a442948)
++++ app/src/main/res/values/colors.xml	(date 1599563785491)
+@@ -3,4 +3,8 @@
+     <color name="colorPrimary">#6200EE</color>
+     <color name="colorPrimaryDark">#3700B3</color>
+     <color name="colorAccent">#03DAC5</color>
++    <color name="colorWhite">#FFFFFF</color>
++    <color name="colorGray">#9A9A9A</color>
++    <color name="colorGray_200">#595959</color>
++    <color name="colorRed">#FF3939</color>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/broadcast_over_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/broadcast_over_layout.xml	(date 1599573487361)
++++ app/src/main/res/layout/broadcast_over_layout.xml	(date 1599573487361)
+@@ -0,0 +1,214 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <ImageView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:scaleType="centerCrop"
++        android:src="@drawable/broadcast_down_background"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintLeft_toLeftOf="parent"
++        app:layout_constraintRight_toRightOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:background="#9f000000">
++
++        <ImageView
++            android:id="@+id/Broadcast_ImageView_Head"
++            android:layout_width="80dp"
++            android:layout_height="80dp"
++            android:layout_marginTop="100dp"
++            android:src="@drawable/broadcast_head"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Name"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="20dp"
++            android:text="卡小诺"
++            android:textColor="@color/colorWhite"
++            android:textSize="18sp"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_ImageView_Head" />
++
++        <View
++            android:id="@+id/Broadcast_View_i"
++            android:layout_width="match_parent"
++            android:layout_height="0.4dp"
++            android:layout_marginLeft="30dp"
++            android:layout_marginTop="18dp"
++            android:layout_marginRight="30dp"
++            android:background="@color/colorGray"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_TextView_Name" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_desc"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="10dp"
++            android:text="直播结束"
++            android:textColor="@color/colorWhite"
++            android:textSize="19sp"
++            app:layout_constraintLeft_toLeftOf="parent"
++            app:layout_constraintRight_toRightOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_View_i" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_descs"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="10dp"
++            android:text="直播时长:  02: 43: 13"
++            android:textColor="@color/colorWhite"
++            android:textSize="18sp"
++            app:layout_constraintLeft_toLeftOf="parent"
++            app:layout_constraintRight_toRightOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_TextView_desc" />
++
++        <View
++            android:id="@+id/Broadcast_View_ii"
++            android:layout_width="match_parent"
++            android:layout_height="0.1dp"
++            android:layout_marginLeft="30dp"
++            android:layout_marginTop="18dp"
++            android:layout_marginRight="30dp"
++            android:background="@color/colorGray_200"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_TextView_descs" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Watch_Num"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="25dp"
++            android:gravity="center"
++            android:text="24863"
++            android:textColor="@color/colorWhite"
++            android:textSize="19dp"
++            app:layout_constraintLeft_toLeftOf="parent"
++            app:layout_constraintRight_toLeftOf="@id/Broadcast_TextView_Like_Num"
++            app:layout_constraintTop_toBottomOf="@+id/Broadcast_View_ii" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Like_Num"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="25dp"
++            android:layout_marginRight="10dp"
++            android:gravity="center"
++            android:text="3978"
++            android:textColor="@color/colorWhite"
++            android:textSize="19dp"
++            app:layout_constraintLeft_toRightOf="@id/Broadcast_TextView_Watch_Num"
++            app:layout_constraintRight_toRightOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/Broadcast_View_ii" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Watch"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="4dp"
++            android:gravity="center"
++            android:text="观看人数"
++            android:textColor="@color/colorWhite"
++            android:textSize="13dp"
++            app:layout_constraintLeft_toLeftOf="parent"
++            app:layout_constraintRight_toRightOf="@+id/Broadcast_TextView_Watch_Num"
++            app:layout_constraintTop_toBottomOf="@+id/Broadcast_TextView_Watch_Num" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Like"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="4dp"
++            android:layout_marginRight="10dp"
++            android:gravity="center"
++            android:text="喜欢"
++            android:textColor="@color/colorWhite"
++            android:textSize="13dp"
++            app:layout_constraintLeft_toLeftOf="@+id/Broadcast_TextView_Like_Num"
++            app:layout_constraintRight_toRightOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/Broadcast_TextView_Like_Num" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Fans_Num"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="30dp"
++            android:gravity="center"
++            android:text="876"
++            android:textColor="@color/colorWhite"
++            android:textSize="19dp"
++            app:layout_constraintLeft_toLeftOf="parent"
++            app:layout_constraintRight_toRightOf="@+id/Broadcast_TextView_Watch_Num"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_TextView_Watch" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Bargain_Num"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="30dp"
++            android:layout_marginRight="10dp"
++            android:gravity="center"
++            android:text="1357"
++            android:textColor="@color/colorWhite"
++            android:textSize="19dp"
++            app:layout_constraintLeft_toLeftOf="@+id/Broadcast_TextView_Like_Num"
++            app:layout_constraintRight_toRightOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_TextView_Like" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Fans"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="4dp"
++            android:gravity="center"
++            android:text="观看人数"
++            android:textColor="@color/colorWhite"
++            android:textSize="13dp"
++            app:layout_constraintLeft_toLeftOf="parent"
++            app:layout_constraintRight_toRightOf="@+id/Broadcast_TextView_Watch_Num"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_TextView_Fans_Num" />
++
++        <TextView
++            android:id="@+id/Broadcast_TextView_Bargain"
++            android:layout_width="0dp"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="4dp"
++            android:layout_marginRight="10dp"
++            android:gravity="center"
++            android:text="成交单"
++            android:textColor="@color/colorWhite"
++            app:layout_constraintLeft_toLeftOf="@+id/Broadcast_TextView_Like_Num"
++            app:layout_constraintRight_toRightOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/Broadcast_TextView_Bargain_Num" />
++
++        <Button
++            android:id="@+id/Broadcast_Button_Sure"
++            android:layout_width="match_parent"
++            android:layout_height="60dp"
++        android:layout_marginTop="80dp"
++        android:background="@drawable/button_selector_broadcast"
++        android:layout_marginLeft="50dp"
++            android:layout_marginRight="50dp"
++            android:text="确定"
++            android:textColor="@color/colorWhite"
++            android:textSize="18dp"
++            app:layout_constraintTop_toBottomOf="@+id/Broadcast_TextView_Bargain" />
++
++    </androidx.constraintlayout.widget.ConstraintLayout>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/button_selector_broadcast.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/button_selector_broadcast.xml	(date 1599563773950)
++++ app/src/main/res/drawable/button_selector_broadcast.xml	(date 1599563773950)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android"
++    android:shape="rectangle">
++    <corners android:radius="30dp"/>
++    <solid android:color="@color/colorRed"/>
++</shape>
+\ No newline at end of file
