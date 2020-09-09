@@ -31,9 +31,7 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                switch (){
-                    ///hahahhahahhahahhahahha
-                }
+
             }
         });
         String.valueOf(0);//uifadhiuahiup

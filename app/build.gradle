@@ -20,6 +20,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
 }
 
 dependencies {
@@ -34,5 +41,64 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+
+
+    implementation 'com.android.support:design:30.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.code.gson:gson:2.2.4'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.github.kinkoi:materialsearchview:1.4.0'
+
+//retrofit+rxjava
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'//转换器，请求结果转换成Model
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'//配合Rxjava 使用
+    implementation "io.reactivex.rxjava2:rxjava:2.1.3" // 必要rxjava2依赖
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1" // 必要rxandrroid依赖，切线程时需要用到
+
+//    //Banner
+//    implementation 'com.github.xiaohaibin:XBanner:androidx_v1.0.6'
+
+    implementation 'com.youth.banner:banner:1.4.10'
+
+  //  implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+
+    //饺子播放器
+    //implementation 'com.github.hellojessehao:JiaoZiVideoPlayer:v6.2.13'
+
+    //播放器
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0.5'
+
+    //视频缓存
+    implementation 'com.danikula:videocache:2.7.1'
+    //aar包
+    //implementation(name: 'umeng-asms-armeabi-v1.1.3', ext: 'aar')
+    //implementation(name: 'umeng-crash-armeabi-v0.0.5', ext: 'aar')
+
+
+    //国家选择
+    implementation'com.hbb20:ccp:2.2.9'
+
+    //图片选择器
+   // implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.3'
+
+    //剪切
+    implementation 'com.soundcloud.android:android-crop:1.0.1@aar'
+
+    //65535
+   // implementation 'com.android.support:multidex:1.0.1'
+    implementation 'liji.library.dev:citypickerview:1.1.0'
 
 }
