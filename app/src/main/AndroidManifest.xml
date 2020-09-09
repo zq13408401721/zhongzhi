@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.own.FootprintActivity" />
         <activity android:name=".ui.own.mywallet.mywalletfragments.BankAddActivity" />
         <activity android:name=".ui.own.mywallet.MyWalletActivity" />
         <activity
