@@ -17,7 +17,7 @@ import com.app.zhongying.ui.adapter.EvaluateAdapter;
 
 public class OwnFragment extends Fragment {
 
-    private TextView evaluate_Individual_stores;
+  /*  private TextView evaluate_Individual_stores;
     private TextView evaluate_zuzu_time_tv;
     private ImageView evaluate_zuzu_img;
     private TextView evaluate_zuzu_contont_tv;
@@ -25,7 +25,7 @@ public class OwnFragment extends Fragment {
     private TextView evaluate_zuzu_price_tv;
     private Button button;
     private TextView evaluate_zuzu_like_tv;
-    private RecyclerView evaluate_zuzu_rv;
+    private RecyclerView evaluate_zuzu_rv;*/
 
     public OwnFragment() {
     }
@@ -40,7 +40,7 @@ public class OwnFragment extends Fragment {
     }
 
     private void initView(View view) {
-        evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
+      /*  evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
         evaluate_zuzu_time_tv = view.findViewById(R.id.evaluate_zuzu_time_tv);
         evaluate_zuzu_img = view.findViewById(R.id.evaluate_zuzu_img);
         evaluate_zuzu_contont_tv = view.findViewById(R.id.evaluate_zuzu_contont_tv);
@@ -52,7 +52,7 @@ public class OwnFragment extends Fragment {
 
         evaluate_zuzu_rv.setLayoutManager(new GridLayoutManager(getActivity(),2));
         EvaluateAdapter evaluateAdapter = new EvaluateAdapter(getActivity());
-        evaluate_zuzu_rv.setAdapter(evaluateAdapter);
+        evaluate_zuzu_rv.setAdapter(evaluateAdapter);*/
 
 
     }

@@ -16,7 +16,7 @@ import com.app.zhongying.ui.adapter.AftersaleAdapter;
 
 public class LiveFragment extends Fragment {
 
-    private RecyclerView fragment_aftersale_rv2;
+   /* private RecyclerView fragment_aftersale_rv2;*/
 
     public LiveFragment() {
     }
@@ -30,9 +30,9 @@ public class LiveFragment extends Fragment {
     }
 
     private void initView(View view) {
-        fragment_aftersale_rv2 = view.findViewById(R.id.fragment_aftersale_rv2);
+        /*fragment_aftersale_rv2 = view.findViewById(R.id.fragment_aftersale_rv2);
         fragment_aftersale_rv2.setLayoutManager(new LinearLayoutManager(getActivity()));
         AftersaleAdapter aftersaleAdapter = new AftersaleAdapter(getActivity());
-        fragment_aftersale_rv2.setAdapter(aftersaleAdapter);
+        fragment_aftersale_rv2.setAdapter(aftersaleAdapter);*/
     }
 }
