@@ -50,6 +50,9 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/jinru" />
+=======
+            android:background="@drawable/group" />
+>>>>>>> Stashed changes
 
     </RelativeLayout>
 
@@ -93,6 +96,8 @@
             android:layout_centerVertical="true"
             android:background="@drawable/jinru" />
 
+            android:background="@drawable/group" />
+
     </RelativeLayout>
 
     <View
@@ -135,6 +140,8 @@
             android:layout_centerVertical="true"
             android:background="@drawable/jinru" />
 
+            android:background="@drawable/group" />
+
     </RelativeLayout>
 
     <View
@@ -176,6 +183,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/jinru" />
+
+            android:background="@drawable/group" />
 
     </RelativeLayout>
 
@@ -220,6 +229,8 @@
             android:layout_centerVertical="true"
             android:background="@drawable/jinru" />
 
+            android:background="@drawable/group" />
+
     </RelativeLayout>
 
     <View
@@ -262,6 +273,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/jinru" />
+
+            android:background="@drawable/group" />
 
     </RelativeLayout>
 

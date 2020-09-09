@@ -15,7 +15,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/returns"
-            android:background="@drawable/jinru"
+
+            android:background="@drawable/group"
             android:layout_width="@dimen/dp_20"
             android:rotation="180"
             android:layout_height="@dimen/dp_20"/>
