@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    tools:context=".ui.live.HomePageActivity"
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
@@ -14,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/Live_HomePage_ImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/group" />
@@ -106,7 +108,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_follow"
+                    android:id="@+id/Live_TextView_Follow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="关注"
@@ -130,7 +132,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_fans"
+                    android:id="@+id/Live_TextView_Fans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="粉丝"
@@ -155,7 +157,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_collection"
+                    android:id="@+id/Live_TextView_Collection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="被收藏"

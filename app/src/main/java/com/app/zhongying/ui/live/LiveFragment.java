@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,10 +23,6 @@ import com.app.zhongying.R;
 import java.util.ArrayList;
 
 public class LiveFragment extends Fragment {
-    private ImageView titleLayoutLeftImage;
-    private ImageView titleLayoutRightImage;
-    private TextView titleLayoutMiddenText;
-    private Toolbar titleLayoutToolbar;
     private RecyclerView liverv;
 
     public LiveFragment(){}
@@ -39,18 +36,15 @@ public class LiveFragment extends Fragment {
     }
 
     private void initView(View view) {
-        View title = view.findViewById(R.id.title_live);
-        titleLayoutLeftImage = title.findViewById(R.id.title_layout_left_image);
-        titleLayoutMiddenText = title.findViewById(R.id.title_layout_midden_text);
-        titleLayoutToolbar = title.findViewById(R.id.title_layout_toolbar);
-        titleLayoutRightImage = title.findViewById(R.id.title_layout_right_image);
 
-        titleLayoutLeftImage.setVisibility(View.GONE);//隐藏返回按钮
-        titleLayoutRightImage.setVisibility(View.VISIBLE);//展示右边清单按钮
-        titleLayoutMiddenText.setVisibility(View.VISIBLE);//展示中间的text
-        titleLayoutMiddenText.setText("直播");
-        titleLayoutMiddenText.setTextColor(Color.BLACK);
-        titleLayoutMiddenText.setTextSize(16);
+        view.findViewById(R.id.header_jianjie).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), HomePageActivity.class);
+                startActivity(intent);
+            }
+        });
+
         liverv = view.findViewById(R.id.rv_live);
         liverv.setLayoutManager(new GridLayoutManager(getContext(),2));
         ArrayList<String> strings = new ArrayList<>();
@@ -67,31 +61,24 @@ public class LiveFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        View tz1 = view.findViewById(R.id.tz1);
-        View tz2 = view.findViewById(R.id.tz2);
-        //通知点击监听
-        tz1.setOnClickListener(new View.OnClickListener() {
+
+        view.findViewById(R.id.Live_ViewFlipper_i).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getContext(), StreamingActivity.class);
+                startActivity(intent);
             }
         });
-        tz2.setOnClickListener(new View.OnClickListener() {
+        
+        view.findViewById(R.id.Live_ViewFlipper_ii).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getContext(), StreamingActivity.class);
+                startActivity(intent);
             }
         });
-        View own = view.findViewById(R.id.own_live);
-        ImageView header = own.findViewById(R.id.header_jianjie);
-        Button startbtn = own.findViewById(R.id.btn_start);
-        //头像点击监听
-        header.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        Button startbtn = view.findViewById(R.id.btn_start);
 
-            }
-        });
         //开启直播
         startbtn.setOnClickListener(new View.OnClickListener() {
             @Override

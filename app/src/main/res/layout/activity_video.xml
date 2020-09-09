@@ -194,8 +194,8 @@
 
     <com.app.zhongying.common.LoveLayout
         android:id="@+id/video_love"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/dp_80"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="31dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         tools:layout_editor_absoluteY="3dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
