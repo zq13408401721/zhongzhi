@@ -1,11 +1,13 @@
-package com.app.zhongying;
+package com.app.zhongying.ui.live;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.app.zhongying.R;
 import com.app.zhongying.common.LoveLayout;
 
 public class VideoActivity extends AppCompatActivity implements View.OnClickListener {
@@ -48,6 +50,8 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.video_exit:
                 //关闭直播
+                Intent intent = new Intent(this, FinalBroadcaseActivity.class);
+                startActivity(intent);
                 finish();
                 break;
         }

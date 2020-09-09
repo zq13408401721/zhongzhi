@@ -1,5 +1,6 @@
 package com.app.zhongying.ui.live;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -62,7 +63,8 @@ public class LiveFragment extends Fragment {
         liveRvAdapter.setOnItemClickListerner(new LiveRvAdapter.onItemClickListerner() {
             @Override
             public void onItemClick(int postion) {
-
+                Intent intent = new Intent(getContext(), StreamingActivity.class);
+                startActivity(intent);
             }
         });
         View tz1 = view.findViewById(R.id.tz1);
@@ -94,7 +96,8 @@ public class LiveFragment extends Fragment {
         startbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getContext(), VideoActivity.class);
+                startActivity(intent);
             }
         });
     }

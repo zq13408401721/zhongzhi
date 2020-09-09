@@ -40,5 +40,5 @@
         android:layout_marginTop="8dp"
         android:singleLine="true"
         android:text="抱抱是只猫正在直播中猫正在直播中"
-        android:textColor="@color/c_000000" />
+        android:textColor="@color/colorBlack" />
 </RelativeLayout>

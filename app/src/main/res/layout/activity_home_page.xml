@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="个人主页"
-            android:textColor="@color/c_000000"
+            android:textColor="@color/colorBlack"
             android:textSize="20dp" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -31,7 +31,7 @@
         android:id="@+id/cl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/c_ff0000"
+        android:background="@color/colorRed"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <ImageView

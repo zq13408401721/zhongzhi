@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoActivity">
+    tools:context=".ui.live.VideoActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -191,9 +191,11 @@
         app:layout_constraintRight_toLeftOf="@+id/video_praise"
         android:layout_width="50dp"
         android:layout_height="55dp"/>
+
     <com.app.zhongying.common.LoveLayout
         android:id="@+id/video_love"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"/>
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="3dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

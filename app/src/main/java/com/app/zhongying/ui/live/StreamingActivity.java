@@ -1,4 +1,4 @@
-package com.app.zhongying;
+package com.app.zhongying.ui.live;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.app.zhongying.R;
 import com.app.zhongying.adapter.RlvAdapter;
 import com.app.zhongying.common.LoveLayout;
 
@@ -42,8 +43,6 @@ public class StreamingActivity extends AppCompatActivity implements View.OnClick
             case R.id.stream_exit:
                 //退出当前页面
                 finish();
-
-
                 break;
             case R.id.stream_praise:
               //点赞
@@ -86,7 +85,6 @@ public class StreamingActivity extends AppCompatActivity implements View.OnClick
             list.add(R.mipmap.youting);
             list.add(R.mipmap.hua);
         }
-
 
         RlvAdapter adapter = new RlvAdapter(this, list);
         rlv.setAdapter(adapter);
