@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.own.activities.MessageActivity;
 import com.app.zhongying.ui.own.activities.MyLoveActivity;
 
 public class OwnFragment extends Fragment implements View.OnClickListener {
@@ -176,6 +177,7 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面消息中心跳转
             case R.id.xiaoxi:
+                startActivity(new Intent(getContext(), MessageActivity.class));
                 break;
             //我的页面我的足迹跳转
             case R.id.zuji:
