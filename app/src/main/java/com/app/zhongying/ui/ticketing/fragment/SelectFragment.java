@@ -13,6 +13,8 @@ import com.app.zhongying.R;
 import com.app.zhongying.ui.zidingyiview.SeatSelectView;
 import com.app.zhongying.ui.ticketing.activity.ReserveActivity;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,11 +23,11 @@ public class SelectFragment extends Fragment {
     private SeatSelectView seat;
     private ReserveActivity activity;
     private List<Point> list= new ArrayList<>();
-    private ILoad iLoad;
-
-    public void setiLoad(ILoad iLoad) {
-        iLoad.getList(list);
-    }
+//    private ILoad iLoad;
+//
+//    public void setiLoad(ILoad iLoad) {
+//        this.iLoad = iLoad;
+//    }
 
     public SelectFragment(ReserveActivity activity) {
         this.activity = activity;
@@ -51,16 +53,20 @@ public class SelectFragment extends Fragment {
 
     private static final String TAG = "SelectFragment";
 
-    public void getData(List<Point> data) {
-        Log.d(TAG, "getData: " + data.size());
-        if(data!=null&&data.size()>0){
-            list.clear();
-            list.addAll(data);
-        }
-    }
-
-    interface ILoad {
-        void getList(List<Point> data);
-    }
-
+//    public void getData(List<Point> data) {
+//        Log.d(TAG, "getData: " + data.size());
+//        StringBuffer stringBuffer = new StringBuffer();
+//        if(data!=null&&data.size()>0){
+//            list.clear();
+//            list.addAll(data);
+//            for (int i = 0; i < data.size(); i++) {
+//                stringBuffer = stringBuffer.append(data.get(i));
+//            }
+//            //EventBus.getDefault().post(string);
+//        }
+//    }
+//
+//    interface ILoad {
+//        void getList(List<Point> data);
+//    }
 }

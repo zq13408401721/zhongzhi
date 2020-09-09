@@ -23,6 +23,8 @@ import androidx.annotation.Nullable;
 import com.app.zhongying.R;
 import com.app.zhongying.ui.ticketing.fragment.SelectFragment;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 
 public class SeatSelectView extends View {
@@ -78,7 +80,6 @@ public class SeatSelectView extends View {
     private float zoom;
     float xScalel = 1;
     float yScalel = 1;
-    private StringBuffer location;
     private SelectFragment selectFragment;
 
     public SeatSelectView(Context context, @Nullable AttributeSet attrs) {
@@ -327,7 +328,8 @@ public class SeatSelectView extends View {
             }
             invalidate();
             Log.d(TAG, "onSingleTapConfirmed: "+list.toString());
-            selectFragment.getData(list);
+            //selectFragment.getData(list);
+            EventBus.getDefault().post(list.toString());
             return true;
         }
     });
@@ -346,11 +348,17 @@ public class SeatSelectView extends View {
         int baseLine = (int) ((bottom + top - fontMetrics.bottom - fontMetrics.top) / 2);
         return baseLine;
     }
-
-    String a="";
     private void drawText(Canvas canvas, int row, int column, float top, float left) {
         String txt = (row + 1) + "排";
         String txt1 = (column + 1) + "座";
+
+        int hang = row+1;
+        int lie = column+1;
+        String a = new String();
+        a = hang+"-"+lie;
+
+
+
         TextPaint txtPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         txtPaint.setColor(Color.WHITE);
         txtPaint.setTypeface(Typeface.DEFAULT_BOLD);
@@ -364,14 +372,10 @@ public class SeatSelectView extends View {
         //只绘制一行文字
         if (txt1 == null) {
             canvas.drawText(txt, startX, getBaseLine(txtPaint, top, top + seatHeight), txtPaint);
-           // Log.d(TAG, "drawText: "+txt);
         } else {
             canvas.drawText(txt, startX, getBaseLine(txtPaint, top, top + center), txtPaint);
             canvas.drawText(txt1, startX, getBaseLine(txtPaint, top + center, top + center + seatHeight / 2), txtPaint);
-            //Log.d(TAG, "drawText: "+txt+"----------"+txt1);
-            a+=txt+"-"+txt1;
-//            location.append(txt);
-//            location.append(txt1);
+
         }
         if (DBG) {
           //  Log.d("drawTest", "top" + top);
