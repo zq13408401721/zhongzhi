@@ -187,6 +187,7 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面申请入驻/我的店铺跳转
             case R.id.shenqing:
+                startActivity(new Intent(getActivity(),FillInformationActivity.class));
                 break;
             //我的页面我的收藏跳转
             case R.id.shoucang:
