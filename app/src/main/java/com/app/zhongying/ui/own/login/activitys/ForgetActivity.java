@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.own.login.fragments.StringUtils;
+
 public class ForgetActivity extends AppCompatActivity {
 
     private EditText mForgetPhone;
@@ -21,6 +23,7 @@ public class ForgetActivity extends AppCompatActivity {
     private EditText mForgetVerification;
     private Button mBtnForget;
     private ImageView mForgetBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +44,14 @@ public class ForgetActivity extends AppCompatActivity {
             }
         });
 
-            mForgetVer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+        mForgetVer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (StringUtils.isMobile(mForgetPhone.getText().toString())) {
                     CountDownTimer timer = new CountDownTimer(60000, 1000) {
                         @Override
                         public void onTick(long l) {
-                            mForgetVer.setText("获取验证码（"+l/1000+"秒）");
+                            mForgetVer.setText("获取验证码（" + l / 1000 + "秒）");
                         }
 
                         @Override
@@ -56,19 +60,23 @@ public class ForgetActivity extends AppCompatActivity {
                         }
                     };
                     timer.start();
+                } else {
+                    Toast.makeText(ForgetActivity.this, "请输入正确手机号", Toast.LENGTH_SHORT).show();
                 }
-            });
-            mBtnForget.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(TextUtils.isEmpty(mForgetPhone.getText().toString())
-                    &&TextUtils.isEmpty(mForgetVerification.getText().toString())){
-                        Toast.makeText(ForgetActivity.this, "请输入正确验证码", Toast.LENGTH_SHORT).show();
-                    }else {
-                        Intent intent = new Intent(ForgetActivity.this, ReviseActivity.class);
-                        startActivity(intent);
-                    }
+            }
+        });
+        mBtnForget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!StringUtils.isMobile(mForgetPhone.getText().toString())) {
+                    Toast.makeText(ForgetActivity.this, "请输入正确手机号", Toast.LENGTH_SHORT).show();
+                } else if (mForgetVerification.getText().toString().isEmpty()) {
+                    Toast.makeText(ForgetActivity.this, "验证码不能为空", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(ForgetActivity.this, ReviseActivity.class);
+                    startActivity(intent);
                 }
-            });
+            }
+        });
     }
 }
