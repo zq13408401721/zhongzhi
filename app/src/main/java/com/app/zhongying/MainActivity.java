@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     //初始化数据
     private void initData(){
-
+        //初始化数据的方法
     }
 
 }
