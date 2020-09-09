@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.live.FriendsActivity"></activity>
         <activity android:name=".ui.live.HomePageActivity" />
-        <activity android:name=".ui.own.SettingsActivity" />
+        <activity
+            android:name=".ui.own.SettingsActivity" android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name=".ui.live.FinalBroadcaseActivity" />
         <activity android:name=".ui.live.VideoActivity" />
         <activity android:name=".ui.live.StreamingActivity" />

@@ -37,7 +37,7 @@ public class LiveFragment extends Fragment {
 
     private void initView(View view) {
 
-        view.findViewById(R.id.header_jianjie).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.Live_ImageView_Header).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), HomePageActivity.class);
@@ -45,10 +45,10 @@ public class LiveFragment extends Fragment {
             }
         });
 
-        liverv = view.findViewById(R.id.rv_live);
+        liverv = view.findViewById(R.id.Live_RecyclerView);
         liverv.setLayoutManager(new GridLayoutManager(getContext(),2));
         ArrayList<String> strings = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 10; i++) {
             strings.add("一条小团团正在直播");
         }
         LiveRvAdapter liveRvAdapter = new LiveRvAdapter(getContext(), strings);
@@ -69,7 +69,7 @@ public class LiveFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        
+
         view.findViewById(R.id.Live_ViewFlipper_ii).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
