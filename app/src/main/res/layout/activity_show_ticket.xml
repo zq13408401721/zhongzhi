@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include_show"
+        layout="@layout/toolbar_show_ticket_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/include_show">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:background="@drawable/img_bg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/shape_cl_bg_show"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="130dp"
+                android:padding="20dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txt_name_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="古琴演奏"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_synopsis_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="演出介绍/购票须知/路线"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_name_show" />
+
+                <ImageView
+                    android:id="@+id/img_into_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_arrows_right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_name_show" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:background="@drawable/shape_show_bg"
+                    android:padding="20dp"
+                    android:id="@+id/cl_synopsis_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_synopsis_show">
+                    <ImageView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:id="@+id/img_clock_show"
+                        android:background="@drawable/img_clock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="15:30 - 17:30"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toTopOf="@id/img_clock_show"
+                        app:layout_constraintBottom_toBottomOf="@id/img_clock_show"
+                        app:layout_constraintLeft_toRightOf="@id/img_clock_show"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        app:layout_constraintTop_toBottomOf="@id/img_clock_show"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/img_clock_show"
+                        android:id="@+id/img_local_show"
+                        android:background="@drawable/img_local"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        app:layout_constraintTop_toTopOf="@id/img_local_show"
+                        app:layout_constraintBottom_toBottomOf="@id/img_local_show"
+                        app:layout_constraintLeft_toRightOf="@id/img_local_show"
+                        android:text="北京市朝阳区工体演出"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_local_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_local_show"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/img_local_show"
+                        android:id="@+id/img_hint_show"
+                        android:background="@drawable/img_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        app:layout_constraintTop_toTopOf="@id/img_hint_show"
+                        app:layout_constraintLeft_toRightOf="@id/img_hint_show"
+                        android:layout_marginLeft="10dp"
+                        android:text="本票品为第三方电子票，需提前下单，客服工作时间为：9:00 - 18:00，下单前5分钟之内未收到验证短信请拨打客服电话：135-2618-9855"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/txt_ticket_select_show"
+                    app:layout_constraintTop_toBottomOf="@id/cl_synopsis_show"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="票种选择"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_show"
+                    app:layout_constraintTop_toBottomOf="@id/txt_ticket_select_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_show"
+                    app:layout_constraintTop_toBottomOf="@id/tab_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

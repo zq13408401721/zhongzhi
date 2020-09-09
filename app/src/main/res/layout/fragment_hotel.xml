@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HotelFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"
+        android:id="@+id/tv_hotel_name"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="大床房"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_hotel_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:text="￥90"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:id="@+id/tv_hotel_money"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_hotel_all"
+        app:layout_constraintTop_toBottomOf="@id/tv_hotel_name"
+        android:layout_marginTop="18dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_hotel_name"
+        android:text="提前一天购票9折"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_hotel_all"
+        app:layout_constraintBottom_toBottomOf="@id/tv_hotel_all"
+        android:text="立即购票"
+        android:paddingRight="6dp"
+        android:paddingLeft="6dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/movie_shop_bg"
+        app:layout_constraintRight_toRightOf="@id/tv_hotel_money"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#E1E1E1"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
