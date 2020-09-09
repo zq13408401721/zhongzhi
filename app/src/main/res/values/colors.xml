@@ -76,4 +76,9 @@
     <color name="color_E7E0D9">#E7E0D9</color>
     <color name="color_CA9D66">#CA9D66</color>
     <color name="color_33353F">#33353F</color>
+    <color name="c_ffffff">#ffffff</color>
+    <color name="c_000000">#000000</color>
+    <color name="c_ff0000">#ff0000</color>
+    <color name="c_eeeeee">#EEEEEE</color>
+    <color name="c_f8f8f8">#f8f8f8</color>
 </resources>

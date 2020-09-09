@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import com.app.zhongying.R;
 
 public class LiveFragment extends Fragment {
-
     public LiveFragment(){}
 
     @Nullable
