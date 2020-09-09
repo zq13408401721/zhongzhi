@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F4"
+    tools:context=".ui.own.FillInformationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_toolbar_fill"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rv_storeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺名"
+            android:textSize="@dimen/dp_18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toLeftOf="@id/iv_right"
+            android:text="8个字范围内" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_right_arrow" />
+    </RelativeLayout>
+        <View
+            android:id="@+id/view1"
+            app:layout_constraintTop_toBottomOf="@id/rv_storeName"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="#F3F3F4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+        <RelativeLayout
+            android:id="@+id/rv_storeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/view1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="店铺图片"
+                android:textSize="@dimen/dp_18" />
+
+            <ImageView
+                android:id="@+id/iv_right2"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_right_arrow" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@id/rv_storeImage"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="#F3F3F4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+        <RelativeLayout
+            android:id="@+id/rv_storeIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/view2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="店铺简介"
+                android:textSize="@dimen/dp_18" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_toLeftOf="@id/iv_right3"
+                android:text="8个字范围内" />
+            <ImageView
+                android:id="@+id/iv_right3"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_right_arrow" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view3"
+            app:layout_constraintTop_toBottomOf="@id/rv_storeIntroduction"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="#F3F3F4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+        <RelativeLayout
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/view3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系人"
+                android:textSize="@dimen/dp_18" />
+
+            <ImageView
+                android:id="@+id/iv_right4"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_right_arrow" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view4"
+            app:layout_constraintTop_toBottomOf="@id/rv_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="#F3F3F4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+        <RelativeLayout
+            android:id="@+id/rv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/view4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话"
+                android:textSize="@dimen/dp_18" />
+
+            <ImageView
+                android:id="@+id/iv_right5"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_right_arrow" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view5"
+            app:layout_constraintTop_toBottomOf="@id/rv_phone"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="#F3F3F4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+        <RelativeLayout
+            android:id="@+id/rv_QQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/view5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ"
+                android:textSize="@dimen/dp_18" />
+
+            <ImageView
+                android:id="@+id/iv_right6"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_right_arrow" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view6"
+            app:layout_constraintTop_toBottomOf="@id/rv_QQ"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="#F3F3F4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+        <RelativeLayout
+            android:id="@+id/rv_Emile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/view6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邮箱"
+                android:textSize="@dimen/dp_18" />
+
+            <ImageView
+                android:id="@+id/iv_right7"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_right_arrow" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view7"
+            app:layout_constraintTop_toBottomOf="@id/rv_Emile"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="#F3F3F4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:text="提交申请"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:background="@drawable/shape_btn_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
