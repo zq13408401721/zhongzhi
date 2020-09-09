@@ -13,7 +13,6 @@ import com.app.zhongying.R;
 
 public class LiveFragment extends Fragment {
 
-    public LiveFragment(){}
 
     @Nullable
     @Override
@@ -24,6 +23,6 @@ public class LiveFragment extends Fragment {
     }
 
     private void initView(View view) {
-
     }
+
 }
