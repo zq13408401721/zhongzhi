@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.app.zhongying.R;
+import com.app.zhongying.activity.own.Modify_userActivity;
 import com.app.zhongying.ui.own.activities.MyLoveActivity;
 
 public class OwnFragment extends Fragment implements View.OnClickListener {
@@ -43,8 +44,6 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_own, container, false);
 
-        View inflate = inflater.inflate(R.layout.fragment_own, container, false);
-        return inflate;
     }
 
     @Override
@@ -136,6 +135,7 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             //我的页面头部跳转
             case R.id.own_head:
+                startActivity(new Intent(getContext(), Modify_userActivity.class));
                 break;
             //我的页面代付款跳转
             case R.id.own_Payment:

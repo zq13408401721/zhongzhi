@@ -137,7 +137,10 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
                 popWnds.dismiss();
                 break;
             case R.id.determine_sex:
-
+                popWnds.dismiss();
+                break;
+            case R.id.returns:
+                finish();
                 break;
         }
     }
