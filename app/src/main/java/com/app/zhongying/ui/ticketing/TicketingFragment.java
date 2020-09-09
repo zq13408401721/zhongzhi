@@ -107,6 +107,7 @@ public class TicketingFragment extends Fragment implements View.OnClickListener 
         initCeHua();
         initbanner();
     }
+
     //侧滑
     private void initCeHua() {
         btn_click.setOnClickListener(this);
