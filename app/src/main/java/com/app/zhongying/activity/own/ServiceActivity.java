@@ -23,8 +23,6 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     private RecyclerView service_rec;
     private EditText service_edittext;
 
-    private ImageView returns;
-    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

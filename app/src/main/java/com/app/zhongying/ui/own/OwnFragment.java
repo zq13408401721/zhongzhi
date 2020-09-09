@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.app.zhongying.R;
 import com.app.zhongying.activity.own.Modify_userActivity;
+import com.app.zhongying.activity.own.ServiceActivity;
 import com.app.zhongying.ui.own.activities.MessageActivity;
 import com.app.zhongying.ui.own.activities.MyLoveActivity;
 import com.app.zhongying.ui.own.mywallet.MyWalletActivity;
@@ -159,18 +160,27 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面我的积分跳转
             case R.id.own_integral:
+                startActivity(new Intent(getContext(), MyWalletActivity.class).putExtra("id",0));
                 break;
             //我的页面我的余额跳转
             case R.id.own_balance:
+                startActivity(new Intent(getContext(), MyWalletActivity.class).putExtra("id",1));
+
                 break;
             //我的页面会员中心跳转
             case R.id.own_core:
+                startActivity(new Intent(getContext(), MyWalletActivity.class).putExtra("id",2));
+
                 break;
             //我的页面钱包明细跳转
             case R.id.own_detailed:
+                startActivity(new Intent(getContext(), MyWalletActivity.class).putExtra("id",3));
+
                 break;
             //我的页面支付绑定跳转
             case R.id.own_binding:
+                startActivity(new Intent(getContext(), MyWalletActivity.class).putExtra("id",4));
+
                 break;
             //我的页面我的钱包进入钱包跳转
             case R.id.own_jinru_money:
@@ -190,9 +200,11 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面在线客服跳转
             case R.id.kefu:
+                startActivity(new Intent(getContext(), ServiceActivity.class));
                 break;
             //我的页面邀请好友跳转
             case R.id.yaoqing:
+                startActivity(new Intent(getContext(),InvitationActivity.class));
                 break;
             //我的页面申请入驻/我的店铺跳转
             case R.id.shenqing:
