@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.app.zhongying.R;
-public class TicketingFragment extends Fragment {
+public class TicketingFragment1 extends Fragment {
 
-    public TicketingFragment() {
+    public TicketingFragment1() {
         // Required empty public constructor
     }
 
