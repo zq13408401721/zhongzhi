@@ -40,5 +40,4 @@ public class ArticledetailsActivity extends AppCompatActivity {
         TextPaint paint = tvtitle.getPaint();
         paint.setFakeBoldText(true);
     }
-
 }
