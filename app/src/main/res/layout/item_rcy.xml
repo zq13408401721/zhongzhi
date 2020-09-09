@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView CardView_cardCornerRadius="15dp"
+    android:padding="15dp"
+    android:background="@color/hui"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/reccommend_tu"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/huang"
+            android:src="@drawable/ic_baseline_spa_24"
+            app:layout_constraintTop_toBottomOf="@id/reccommend_tu"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="俄铝二年滚不能靠近南京南京烧烤啤酒你是看懂啊店铺......."
+            app:layout_constraintTop_toBottomOf="@id/huang"
+            android:textSize="15dp"
+            android:id="@+id/tv_title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 199.33"
+            android:textColor="@color/hong"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

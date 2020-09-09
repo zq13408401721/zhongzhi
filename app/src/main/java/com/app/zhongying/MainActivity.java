@@ -27,5 +27,4 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
         String.valueOf(0);
     }
-
 }
