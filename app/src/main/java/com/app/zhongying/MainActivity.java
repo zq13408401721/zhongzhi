@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         //click
     }
 
-    //测试
-    public void checkOut(){
+    //初始化数据
+    private void initData(){
         //初始化数据的方法
     }
 
