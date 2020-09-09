@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="vedio_tv_bg">#6f000000</color>
+    <color name="white">#ffffff</color>
+    <color name="Red">#F44336</color>
+    <color name="white_lucency">#9fFFFFFF</color>
+    <color name="c_74413737">#7f0B0B0B</color>
 </resources>
