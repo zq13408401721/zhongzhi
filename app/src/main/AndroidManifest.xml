@@ -11,6 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.own.ProductManageActivity"></activity>
         <activity android:name=".ui.own.MyStoreActivity"></activity>
+
+
         <activity android:name=".ui.own.FillInformationActivity">
 
         </activity>
