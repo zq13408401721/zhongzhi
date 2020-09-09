@@ -30,35 +30,35 @@ public class MyStoreActivity extends AppCompatActivity {
     @BindView(R.id.iv_right_order)
     ImageView ivRightOrder;
     @BindView(R.id.tv_obligation)//待付款
-    TextView tvObligation;
+            TextView tvObligation;
     @BindView(R.id.tv_send)//待发货
-    TextView tvSend;
+            TextView tvSend;
     @BindView(R.id.tv_harvest)//待收货
-    TextView tvHarvest;
+            TextView tvHarvest;
     @BindView(R.id.tv_evaluate)//评价
-    TextView tvEvaluate;
+            TextView tvEvaluate;
     @BindView(R.id.tv_after)//售后
-    TextView tvAfter;
+            TextView tvAfter;
     @BindView(R.id.iv_right_product)
     ImageView ivRightProduct;
     @BindView(R.id.tv_add)//添加商品
-    TextView tvAdd;
+            TextView tvAdd;
     @BindView(R.id.tv_sell)//出售中
-    TextView tvSell;
+            TextView tvSell;
     @BindView(R.id.tv_sold_out)//下架商品
-    TextView tvSoldOut;
+            TextView tvSoldOut;
     @BindView(R.id.tv_warehouse)//仓库中
-    TextView tvWarehouse;
+            TextView tvWarehouse;
     @BindView(R.id.tv_out_of_print)//已售完
-    TextView tvOutOfPrint;
+            TextView tvOutOfPrint;
     @BindView(R.id.rv_msg)
     RelativeLayout rvMsg;
     @BindView(R.id.rv_look_myStore)
     RelativeLayout rvLookMyStore;
     @BindView(R.id.rv_profit)//营销利润
-    RelativeLayout rvProfit;
+            RelativeLayout rvProfit;
     @BindView(R.id.rv_customer_service)//在线客服
-    RelativeLayout rvCustomerService;
+            RelativeLayout rvCustomerService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,17 +71,75 @@ public class MyStoreActivity extends AppCompatActivity {
     private void initView() {
         toolbarTitle.setText("我的店铺");
     }
-    @OnClick({R.id.iv_back,R.id.iv_right_order,R.id.tv_obligation,R.id.tv_send,
-            R.id.tv_evaluate,R.id.tv_harvest,R.id.tv_after,R.id.iv_right_product,
-            R.id.tv_add,R.id.tv_sell, R.id.tv_sold_out,R.id.tv_warehouse,R.id.tv_out_of_print})
-    public void onClickListener(View view){
-        switch (view.getId()){
+
+    @OnClick({R.id.iv_back, R.id.iv_right_order, R.id.tv_obligation, R.id.tv_send,
+            R.id.tv_evaluate, R.id.tv_harvest, R.id.tv_after, R.id.iv_right_product,
+            R.id.tv_add, R.id.tv_sell, R.id.tv_sold_out, R.id.tv_warehouse, R.id.tv_out_of_print})
+    public void onClickListener(View view) {
+        switch (view.getId()) {
             case R.id.iv_back:
                 finish();
                 break;
+            case R.id.iv_right_order:
+                break;
             case R.id.iv_right_product:
-                startActivity(new Intent(this,ProductManageActivity.class));
+                startActivity(new Intent(this, ProductManageActivity.class));
+                break;
+            case R.id.tv_obligation://待付款
+                break;
+            case R.id.tv_send://待发货
+                break;
+            case R.id.tv_evaluate://评价
+                break;
+            case R.id.tv_harvest://待收货
+                break;
+            case R.id.tv_after://售后
+                break;
+            case R.id.tv_add://添加商品
+                startAdd();
+                break;
+            case R.id.tv_sell://出售中
+                startSell();
+                break;
+            case R.id.tv_sold_out://下架商品
+                startSoldOut();
+                break;
+            case R.id.tv_warehouse://仓库中
+                startWarehouse();
+                break;
+            case R.id.tv_out_of_print://已售完
+                startOutofPrint();
                 break;
         }
+    }
+
+    private void startAdd() {
+        Intent intent = new Intent(this, ProductManageActivity.class);
+        intent.putExtra("id",0);
+        startActivity(intent);
+    }
+
+    private void startSell() {
+        Intent intent = new Intent(this, ProductManageActivity.class);
+        intent.putExtra("id",1);
+        startActivity(intent);
+    }
+
+    private void startSoldOut() {
+        Intent intent = new Intent(this, ProductManageActivity.class);
+        intent.putExtra("id",2);
+        startActivity(intent);
+    }
+
+
+    private void startWarehouse() {
+        Intent intent = new Intent(this, ProductManageActivity.class);
+        intent.putExtra("id",3);
+        startActivity(intent);
+    }
+    private void startOutofPrint() {
+        Intent intent = new Intent(this, ProductManageActivity.class);
+        intent.putExtra("id",4);
+        startActivity(intent);
     }
 }
