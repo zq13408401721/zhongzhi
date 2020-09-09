@@ -12,4 +12,6 @@
     <color name="colorGreen">#5AE45F</color>
     <color name="hong">#F44336</color>
     <color name="hui">#AFADAC</color>
+    <color name="colorYes">#CF453D</color>
+    <color name="colorNo">#929292</color>
 </resources>
