@@ -13,6 +13,7 @@
         <activity android:name=".activity.own.ServiceActivity" />
         <activity android:name=".activity.own.Modify_DateActivity" />
         <activity android:name=".activity.own.Modify_nameActivity" />
+        <activity android:name=".ui.own.FootprintActivity"/>
         <activity android:name=".activity.own.ResumeActivity" />
         <activity android:name=".ui.own.mywallet.MyWalletActivity" />
         <activity android:name=".ui.own.mywallet.mywalletfragments.BankAddActivity" />
