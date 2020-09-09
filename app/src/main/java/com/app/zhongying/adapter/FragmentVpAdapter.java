@@ -26,4 +26,6 @@ public class FragmentVpAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return list.size();
     }
+
+
 }
