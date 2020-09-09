@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_light_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:src="@drawable/iv_head_replace"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/img_head"
+        app:layout_constraintLeft_toRightOf="@id/img_head"
+        android:text="阳阳的店"
+        android:textSize="@dimen/sp_17"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:text="亲亲，我们这边暂不支持退款"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintLeft_toRightOf="@id/img_head"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

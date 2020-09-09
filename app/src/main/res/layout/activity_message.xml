@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08000000"
+    tools:context=".ui.own.activities.MessageActivity">
+
+    <include layout="@layout/layout_toolbar" android:id="@+id/toolbar"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginHorizontal="@dimen/dp_25"
+        android:background="@color/cardview_light_background"
+        app:tabIndicatorHeight="0dp"
+        app:tabBackground="@drawable/tab_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_below="@id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
