@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#DF6F6D</color>
+    <color name="transparent">#00000000</color>
+    <!--AlertView-->
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <color name="bgColor_alertview_alert_start">#f0f0f0</color>
+    <!--标题颜色-->
+    <color name="textColor_alert_title">#000000</color>
+    <color name="textColor_actionsheet_title">#8f8f8f</color>
+    <!--消息颜色-->
+    <color name="textColor_alert_msg">#000000</color>
+    <color name="textColor_actionsheet_msg">#8f8f8f</color>
+    <!--线条颜色-->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--取消按钮颜色-->
+    <color name="textColor_alert_button_cancel">#5a5a5a</color>
+    <!--高亮按钮颜色-->
+    <color name="textColor_alert_button_destructive">#5a5a5a</color>
+    <!--普通按钮文字颜色-->
+    <color name="textColor_alert_button_others">#007aff</color>
+    <!--点击颜色-->
+    <color name="bgColor_alert_button_press">#EAEAEA</color>
+    <!--输入框底部线条-->
+    <color name="button">#F8F8F8</color>
+
+    <color name="color_27CCCCCC">#27CCCCCC</color>
+    <color name="color_d6d6d6">#d6d6d6</color>
+    <color name="color_e6e6e6">#e6e6e6</color>
+    <color name="color_f00">#f00</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_DF6F6D">#F54235</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_C6002A">#C6002A</color>
+
+    <color name="colorBack">#000000</color>
+    <color name="color6E6E6E">#6E6E6E</color>
+    <color name="color81F28E">#81F28E</color>
+    <color name="colorFFFFFF">#FFFFFF</color>
+    <color name="color4D504E">#4D504E</color>
+    <color name="colorC1FFDC">#C1FFDC</color>
+    <color name="colorF85151">#F85151</color>
+    <color name="color282828">#282828</color>
+    <color name="colorF9DDB7">#F9DDB7</color>
+    <color name="color999999">#999999</color>
+    <color name="color666666">#666666</color>
+    <color name="color94FFA3">#94FFA3</color>
+    <color name="colorF9F9F9">#F5F5F5</color>
+    <color name="colorffff6100">#ffff6100</color>
+    <color name="colorFFC900">#1AFFC900</color>
+    <color name="color888888">#888888</color>
+    <color name="colorFFCE4E">#FFCE4E</color>
+    <color name="colorE8E8E8">#E8E8E8</color>
+    <color name="colorEBD4B8">#EBD4B8</color>
+    <color name="colorCA9D66">#CA9D66</color>
+    <color name="colorF4E7D4">#F4E7D4</color>
+    <color name="colorFF6100">#FF6100</color>
+    <color name="colorF8F8F8">#F8F8F8</color>
+    <color name="colorFF6900">#FF6900</color>
+    <color name="colorE5E4E4">#E9E9E9</color>
+    <color name="color_EAECF0">#EAECF0</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_F7F5EA">#F7F5EA</color>
+    <color name="color_41A9E8">#41A9E8</color>
+    <color name="color_E7E0D9">#E7E0D9</color>
+    <color name="color_CA9D66">#CA9D66</color>
+    <color name="color_33353F">#33353F</color>
 </resources>
