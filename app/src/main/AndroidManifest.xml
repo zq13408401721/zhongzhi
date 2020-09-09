@@ -15,8 +15,8 @@
         <activity android:name=".activity.own.ResumeActivity" />
         <activity
             android:name=".activity.own.Modify_userActivity" />
-        <activity android:name=".ui.own.ProductManageActivity"></activity>
-        <activity android:name=".ui.own.MyStoreActivity"></activity>
+        <activity android:name=".ui.own.ProductManageActivity"/>
+        <activity android:name=".ui.own.MyStoreActivity"/>
 
 
         <activity android:name=".ui.own.SettingsActivity"/>
