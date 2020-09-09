@@ -13,6 +13,7 @@
         <activity android:name=".ui.own.MyStoreActivity"></activity>
 
 
+        <activity android:name=".ui.own.SettingsActivity"/>
         <activity android:name=".ui.own.FillInformationActivity">
 
         </activity>
