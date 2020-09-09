@@ -12,10 +12,12 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.zhongying.R;
+import com.app.zhongying.adapter.FeaturedAdapter;
 import com.app.zhongying.ui.home.activity.SeekActivity;
 import com.app.zhongying.activity.DetailsActivity;
 import com.app.zhongying.activity.EventAcitivity;
@@ -54,6 +56,7 @@ public class HomeFragment extends Fragment {
     private ViewPager vp;
     private LinearLayout lllll;
     private ArrayList<Fragment> fragments;
+    private ArrayList<String> list;
 
     @Nullable
     @Override
@@ -92,20 +95,22 @@ public class HomeFragment extends Fragment {
         tablayout.getTabAt(0).setText("行业动态");
         tablayout.getTabAt(1).setText("政策法规");
         tablayout.getTabAt(2).setText("平台公告");
-
-
+        list = new ArrayList<>();
+        rv_featured.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        FeaturedAdapter featuredAdapter = new FeaturedAdapter(getActivity(),list);
+        rv_featured.setAdapter(featuredAdapter);
 
         rv_featured.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                Intent intent = new Intent(getActivity(), RecommendActivity.class);
                 startActivity(intent);
             }
         });
         image_Event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), EventAcitivity.class);
+                Intent intent = new Intent(getActivity(), RecommendActivity.class);
                 startActivity(intent);
             }
         });
@@ -113,7 +118,7 @@ public class HomeFragment extends Fragment {
         yingshi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MoveActivity.class);
+                Intent intent = new Intent(getActivity(), RecommendActivity.class);
                 startActivity(intent);
             }
         });
@@ -121,7 +126,7 @@ public class HomeFragment extends Fragment {
         wenlv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), WenBrigadeAcitivity.class);
+                Intent intent = new Intent(getActivity(), RecommendActivity.class);
                 startActivity(intent);
             }
         });
@@ -129,7 +134,7 @@ public class HomeFragment extends Fragment {
         wenchuang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), WenCreateActivity.class);
+                Intent intent = new Intent(getActivity(), RecommendActivity.class);
                 startActivity(intent);
             }
         });
@@ -137,7 +142,7 @@ public class HomeFragment extends Fragment {
         remen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), PeopleActivity.class);
+                Intent intent = new Intent(getActivity(), RecommendActivity.class);
                 startActivity(intent);
             }
         });

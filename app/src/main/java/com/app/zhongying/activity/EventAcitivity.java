@@ -1,4 +1,7 @@
 package com.app.zhongying.activity;
 
-public class EventAcitivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class EventAcitivity extends AppCompatActivity {
+
 }

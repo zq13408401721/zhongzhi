@@ -15,8 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.home.activity.RecommendActivity"></activity>
+        <activity android:name=".activity.EventAcitivity"/>
         <activity android:name=".ui.home.activity.SeekActivity"/>
         <activity android:name=".ui.own.activities.MyLoveActivity"/>
+        <activity android:name=".ui.home.activity.ArticledetailsActivity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
