@@ -24,7 +24,6 @@ public class Modify_DateActivity extends AppCompatActivity implements View.OnCli
 
     private ImageView date_returns;
 
-    private ImageView date_returns;
     private TextView date_title;
     private TextView date_preservation;
     private EditText year1;
