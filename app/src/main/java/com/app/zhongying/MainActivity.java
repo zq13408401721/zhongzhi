@@ -1,7 +1,6 @@
 package com.app.zhongying;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -37,15 +36,6 @@ public class MainActivity extends AppCompatActivity {
         });
         String.valueOf(0);//uifadhiuahiup
 
-        //田大超知道我是谁？你不知道
-
-        // hello
-        //click
-    }
-
-    //初始化数据
-    private void initData(){
-        //初始化数据的方法
     }
 
 }
