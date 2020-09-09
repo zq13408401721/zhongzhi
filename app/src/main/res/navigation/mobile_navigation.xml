@@ -13,15 +13,15 @@
 
     <fragment
         android:id="@+id/navigation_shop"
-        android:name="com.app.zhongying.ui.live.LiveFragment"
+        android:name="com.app.zhongying.ui.shop.ShopFragment"
         android:label="@string/title_shop"
-        tools:layout="@layout/fragment_live" />
+        tools:layout="@layout/fragment_shop" />
 
     <fragment
         android:id="@+id/navigation_ticketing"
-        android:name="com.app.zhongying.ui.live.LiveFragment"
+        android:name="com.app.zhongying.ui.ticketing.TicketingFragment"
         android:label="@string/title_ticketing"
-        tools:layout="@layout/fragment_live" />
+        tools:layout="@layout/fragment_ticketing" />
 
     <fragment
         android:id="@+id/navigation_live"
