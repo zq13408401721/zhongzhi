@@ -1,4 +1,4 @@
-package com.app.zhongying.ui.ticketing;
+package com.app.zhongying.ui.ticketing.fragment;
 
 import android.content.Context;
 import android.os.Bundle;

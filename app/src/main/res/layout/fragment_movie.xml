@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.MovieFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -34,6 +33,7 @@
         app:layout_constraintLeft_toLeftOf="@id/tv_movie_name"
         android:text="查看电影及座位"/>
     <TextView
+        android:id="@+id/tv_lijigoumai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/tv_movie_all"

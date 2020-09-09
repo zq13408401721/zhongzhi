@@ -1,6 +1,5 @@
-package com.app.zhongying.ui.ticketing;
+package com.app.zhongying.ui.zidingyiview;
 
-import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,23 +10,20 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Typeface;
-import android.location.Location;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.DecelerateInterpolator;
 
 import androidx.annotation.Nullable;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.ticketing.fragment.SelectFragment;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SeatSelectView extends View {
     private final boolean DBG = false;

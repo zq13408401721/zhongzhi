@@ -1,8 +1,5 @@
-package com.app.zhongying.ui.ticketing;
+package com.app.zhongying.ui.ticketing.activity;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Context;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,16 +8,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.zhongying.R;
-import com.bumptech.glide.Glide;
+import com.app.zhongying.ui.ticketing.fragment.SelectFragment;
+import com.app.zhongying.ui.adapter.SelectVpAdapter;
+import com.app.zhongying.ui.adapter.TopVpAdapter;
+import com.app.zhongying.ui.ticketing.fragment.ImageFragment;
 import com.google.android.material.tabs.TabLayout;
-import com.youth.banner.Banner;
-import com.youth.banner.Transformer;
-import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,14 +98,14 @@ public class ReserveActivity extends AppCompatActivity{
         SelectFragment selectFragment = new SelectFragment(this);
         fragments.add(selectFragment);
 
-        selectFragment.setiLoad(new SelectFragment.ILoad() {
-            @Override
-            public void getList(List<Point> data) {
-                if (data!=null){
-                    Log.d(TAG, "getList: "+data.toString());
-                }
-            }
-        });
+//        selectFragment.setiLoad(new SelectFragment.ILoad() {
+//            @Override
+//            public void getList(List<Point> data) {
+//                if (data!=null){
+//                    Log.d(TAG, "getList: "+data.toString());
+//                }
+//            }
+//        });
 
         SelectVpAdapter vpAdapter = new SelectVpAdapter(getSupportFragmentManager(), tabTitles, fragments);
         vp.setAdapter(vpAdapter);

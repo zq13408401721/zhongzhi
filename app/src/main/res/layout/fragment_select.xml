@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".ui.ticketing.SelectFragment">
+    tools:context=".ui.ticketing.fragment.SelectFragment">
 
-    <com.app.zhongying.ui.ticketing.SeatSelectView
+    <com.app.zhongying.ui.zidingyiview.SeatSelectView
         android:id="@+id/seat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

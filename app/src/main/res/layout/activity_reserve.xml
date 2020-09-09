@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.ticketing.ReserveActivity">
+    tools:context=".ui.ticketing.activity.ReserveActivity">
     <LinearLayout
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"

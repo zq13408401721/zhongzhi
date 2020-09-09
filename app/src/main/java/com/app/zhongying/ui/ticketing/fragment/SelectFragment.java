@@ -1,4 +1,4 @@
-package com.app.zhongying.ui.ticketing;
+package com.app.zhongying.ui.ticketing.fragment;
 
 import android.graphics.Point;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.zidingyiview.SeatSelectView;
+import com.app.zhongying.ui.ticketing.activity.ReserveActivity;
 
 import java.util.ArrayList;
 import java.util.List;

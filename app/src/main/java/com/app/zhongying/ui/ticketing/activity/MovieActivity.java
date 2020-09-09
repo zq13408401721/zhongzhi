@@ -44,7 +44,6 @@ public class MovieActivity extends AppCompatActivity {
         for (int i = 0; i < titles.size() ; i++) {
             fragments.add(new MovieFragment());
         }
-
         movie_vp.setAdapter(new MyAdapter(getSupportFragmentManager()));
         movie_tabs.setupWithViewPager(movie_vp);
 
