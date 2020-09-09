@@ -14,6 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.own.InvitationActivity"></activity>
+        <activity android:name=".ui.own.personal_stores.Personal_StoresActivity" />
+        <activity android:name=".activity.own.ServiceActivity" />
+        <activity android:name=".activity.own.Modify_DateActivity" />
+        <activity android:name=".activity.own.Modify_nameActivity" />
+        <activity android:name=".ui.own.FootprintActivity" />
+        <activity android:name=".activity.own.ResumeActivity" />
+        <activity android:name=".ui.own.mywallet.MyWalletActivity" />
+        <activity android:name=".ui.own.mywallet.mywalletfragments.BankAddActivity" />
+        <activity android:name=".activity.own.Modify_userActivity" />
+        <activity android:name=".ui.own.ProductManageActivity" />
+        <activity android:name=".ui.own.MyStoreActivity" />
+        <activity android:name=".ui.own.SettingsActivity" />
+        <activity android:name=".ui.own.FillInformationActivity" />
+        <activity android:name=".ui.own.activities.MessageActivity" />
         <activity android:name=".ui.home.activity.RecommendActivity"></activity>
         <activity android:name=".activity.EventAcitivity"/>
         <activity android:name=".ui.home.activity.SeekActivity"/>
@@ -28,6 +43,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        </activity>
+        <activity
+            android:name=".ui.own.activities.MyLoveActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
