@@ -3,24 +3,24 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@mipmap/ic_home"
         android:title="@string/title_home" />
 
     <item
         android:id="@+id/navigation_shop"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@mipmap/icon_shop"
         android:title="@string/title_shop" />
     <item
         android:id="@+id/navigation_ticketing"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@mipmap/icon_ticketing"
         android:title="@string/title_ticketing" />
     <item
         android:id="@+id/navigation_live"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@mipmap/icon_live"
         android:title="@string/title_live" />
     <item
         android:id="@+id/navigation_own"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@mipmap/icon_own"
         android:title="@string/title_own" />
 
 </menu>
