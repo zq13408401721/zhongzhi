@@ -28,7 +28,23 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-        //dggkkhlkjljhhjj
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
+
+            }
+        });
+        String.valueOf(0);//uifadhiuahiup
+
+        //田大超知道我是谁？你不知道
+
+        // hello
+        //click
+    }
+
+    //初始化数据
+    private void initData(){
+
     }
 
 }
