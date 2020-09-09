@@ -104,7 +104,7 @@ public class MyStoreActivity extends AppCompatActivity {
             case R.id.tv_sold_out://下架商品
                 startSoldOut();
                 break;
-            case R.id.tv_warehouse://仓库中
+            case R.id.tv_warehouse://仓库中、
                 startWarehouse();
                 break;
             case R.id.tv_out_of_print://已售完
