@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import com.app.zhongying.R;
 import com.app.zhongying.activity.own.Modify_userActivity;
 import com.app.zhongying.ui.own.activities.MyLoveActivity;
+import com.app.zhongying.ui.own.mywallet.MyWalletActivity;
 
 public class OwnFragment extends Fragment implements View.OnClickListener {
 
@@ -172,6 +173,7 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面我的钱包进入钱包跳转
             case R.id.own_jinru_money:
+                startActivity(new Intent(getContext(), MyWalletActivity.class));
                 break;
             //我的页面购物车跳转
             case R.id.gouwuche:
