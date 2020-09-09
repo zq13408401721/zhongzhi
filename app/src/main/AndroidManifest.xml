@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.own.InvitationActivity"></activity>
+        <activity android:name=".activity.own.MarketingActivity"/>
         <activity android:name=".ui.own.personal_stores.Personal_StoresActivity" />
         <activity android:name=".activity.own.ServiceActivity" />
         <activity android:name=".activity.own.Modify_DateActivity" />
