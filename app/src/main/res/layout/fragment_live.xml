@@ -1,22 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.live.LiveFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/Live_View_i"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_15"
+            android:background="@color/bgColor_alert_button_press"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/Live_ImageView_i"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_margin="@dimen/dp_3"
+            android:src="@drawable/tz"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Live_View_i" />
+
+        <ViewFlipper
+            android:id="@+id/Live_ViewFlipper_i"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:background="#ffffff"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/slide_in_bottom"
+            android:outAnimation="@anim/slide_out_top"
+            app:layout_constraintLeft_toRightOf="@+id/Live_ImageView_i"
+            app:layout_constraintTop_toTopOf="@+id/Live_ImageView_i"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/Live_txt_i"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_10"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="“一条小团团”正在直播..... 快去观看吧！！！"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/Live_txt_ii"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="从此再无五道口，世上再无段宏楠"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </ViewFlipper>
+
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/zhankai"
+            android:text="详情"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/Live_ImageView_i"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/Live_ImageView_i" />
+
+        <View
+            android:id="@+id/Live_View_ii"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@color/bgColor_alert_button_press"
+            app:layout_constraintTop_toBottomOf="@+id/Live_ImageView_i" />
+
+        <ImageView
+            android:id="@+id/Live_ImageView_ii"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_3"
+            android:layout_marginBottom="@dimen/dp_3"
+            android:src="@drawable/tz"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Live_View_ii" />
+
+        <ViewFlipper
+            android:id="@+id/Live_ViewFlipper_ii"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/slide_in_bottom"
+            android:outAnimation="@anim/slide_out_top"
+            app:layout_constraintBottom_toBottomOf="@id/Live_ImageView_ii"
+            app:layout_constraintLeft_toRightOf="@+id/Live_ImageView_ii"
+            app:layout_constraintTop_toTopOf="@id/Live_ImageView_ii"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/Live_text_i"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_10"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="“一条小团团”正在直播..... 快去观看吧！！！"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/Live_text_ii"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="从此再无五道口，世上再无段宏楠"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </ViewFlipper>
+
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/zhankai"
+            android:text="详情"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/Live_ImageView_ii"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/Live_ImageView_ii" />
+
+        <View
+            android:id="@+id/Live_View_iii"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_15"
+            android:background="@color/bgColor_alert_button_press"
+            app:layout_constraintTop_toBottomOf="@+id/Live_ImageView_ii" />
+
+        <ImageView
+            android:id="@+id/Live_ImageView_Header"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:background="@drawable/jianli"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Live_View_iii" />
+
+        <TextView
+            android:id="@+id/Live_TextView_Attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="我的关注：9"
+            android:textSize="@dimen/dp_18"
+            app:layout_constraintLeft_toRightOf="@+id/Live_ImageView_Header"
+            app:layout_constraintTop_toTopOf="@+id/Live_ImageView_Header" />
+
+        <TextView
+            android:id="@+id/Live_TextView_Fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:text="我的粉丝：12"
+            android:textSize="@dimen/dp_18"
+            app:layout_constraintBottom_toBottomOf="@+id/Live_ImageView_Header"
+            app:layout_constraintLeft_toRightOf="@+id/Live_ImageView_Header" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@drawable/shape_zhibo_tvbg"
+            android:text="开启直播"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Live_ImageView_Header"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Live_ImageView_Header" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Live_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/bgColor_alert_button_press"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Live_ImageView_Header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

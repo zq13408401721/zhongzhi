@@ -55,6 +55,7 @@ public class MyLoveActivity extends AppCompatActivity implements View.OnClickLis
 
     private void initView() {
         imgBack.setVisibility(View.VISIBLE);
+        imgBack.setOnClickListener(this);
         tvManage.setVisibility(View.VISIBLE);
         tvManage.setOnClickListener(this);
         tvTitle.setText("我的收藏");
@@ -86,6 +87,9 @@ public class MyLoveActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.img_back:
+                finish();
+                break;
             case R.id.tv_manage:
                 if (relativeLayout.getVisibility() != View.VISIBLE){
                     relativeLayout.setVisibility(View.VISIBLE);
