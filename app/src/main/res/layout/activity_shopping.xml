@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.adapter.ShoppingActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_shop"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:background="#fff"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="宝贝"
+                android:textColor="#000"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_collect_shop"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/collect"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_share_shop"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/share"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toLeftOf="@+id/iv_collect_shop"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_shop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_shop">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_shop"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#F3B5B5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_title_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="女人出门必备懒人神器，素颜女神就是你"
+                android:textColor="#000"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/banner_shop" />
+
+            <ImageView
+                android:id="@+id/iv_merchant_shop"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/shopping"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_shop" />
+
+            <TextView
+                android:id="@+id/tv_shopTitle_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="阳阳的店"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/iv_merchant_shop"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_shop" />
+
+            <TextView
+                android:id="@+id/tv_optimization_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/shoop_ptimization"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="3dp"
+                android:text="优选好店"
+                android:textSize="11sp"
+                android:textColor="#fff"
+                app:layout_constraintLeft_toRightOf="@id/tv_shopTitle_shop"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_shop" />
+
+            <TextView
+                android:id="@+id/tv_schedule_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shoop_schedule"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="3dp"
+                android:textSize="11sp"
+                android:text="优选好店"
+                android:textColor="#fff"
+                app:layout_constraintLeft_toRightOf="@id/tv_optimization_shop"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_shop" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/content_shop"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shoop_commodity_item"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_shopTitle_shop">
+
+                <ImageView
+                    android:id="@+id/iv_commodity_shop"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_title_commodity_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="15dp"
+                    android:text="MARICE魅力资女士素颜霜"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_commodity_shop"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_content_commodity_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="15dp"
+                    android:text="已销售235件"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_commodity_shop" />
+
+                <TextView
+                    android:id="@+id/tv_purchase_commodity_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/shoop_purchase"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:text="立即购买"
+                    android:textColor="#f00"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_price_commodity_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:text="￥239元"
+                    android:textColor="#f00"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_purchase_commodity_shop"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_evaluate_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="宝贝评价（135）"
+                android:textColor="#000"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_shop" />
+
+            <TextView
+                android:id="@+id/tv_look_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:text="查看全部"
+                android:textSize="11sp"
+                app:layout_constraintRight_toLeftOf="@id/iv_in_shop"
+                app:layout_constraintTop_toBottomOf="@+id/content_shop" />
+
+            <ImageView
+                android:id="@+id/iv_in_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:src="@mipmap/in"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_shop" />
+
+            <ImageView
+                android:id="@+id/iv_user_shop"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="#000"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_evaluate_shop" />
+
+            <TextView
+                android:id="@+id/tv_userName_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:text="抱抱***3939"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@+id/iv_user_shop"
+                app:layout_constraintTop_toBottomOf="@+id/tv_evaluate_shop" />
+
+            <TextView
+                android:id="@+id/tv_userContent_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="挺好用的，皮肤很显白，美美哒"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_user_shop" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_userContent_shop" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/shop_shop"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/shopping"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="31dp"
+            android:text="店铺"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shop_shop" />
+
+        <ImageView
+            android:id="@+id/support_shop"
+            android:layout_marginTop="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/support"
+            app:layout_constraintLeft_toRightOf="@id/shop_shop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="3dp"
+            android:text="客服"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toRightOf="@id/tv_tv"
+            app:layout_constraintTop_toBottomOf="@+id/shop_shop" />
+
+        <TextView
+            android:id="@+id/tv_shopCar_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shoop_ptimization"
+            android:padding="10dp"
+            android:text="加入购物车"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            app:layout_constraintRight_toLeftOf="@+id/tv_purchase_shop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_purchase_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shoop_schedule"
+            android:padding="10dp"
+            android:text="立即购买"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_finish_shop"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/finish"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

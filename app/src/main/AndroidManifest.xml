@@ -15,6 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.fragment.EvaluateActivity"></activity>
+        <activity android:name=".ui.adapter.LookActivity"/>
+        <activity android:name=".ui.adapter.purchaseActivity"/>
+        <activity android:name=".ui.adapter.ShopCarActivity"/>
+        <activity android:name=".ui.adapter.ShoppingActivity"/>
+
         <activity android:name=".ui.own.meorder.ShowOrderActivity"></activity>
         <activity android:name=".ui.shop.activity.ShopCartActivity"/>
         <activity android:name=".ui.own.meorder.MeOrderActivity" />

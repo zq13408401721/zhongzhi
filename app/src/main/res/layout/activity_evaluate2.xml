@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/d10"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.EvaluateActivity">
+
+    <com.app.zhongying.ui.adapter.TitlebarView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:centerTextColor="#302E2E"
+        app:centerTitle="自定义标题"
+        app:rightTextColor="#E31818" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_style"
+        android:elevation="2dp">
+
+
+        <ImageView
+            android:id="@+id/evaluate_zuzu_img"
+            android:layout_width="@dimen/d150"
+            android:layout_height="@dimen/d150"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/evaluate_img_shape"
+            android:src="@mipmap/img_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/evaluate_zuzu_contont_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="MARICE 魅力资女士素颜霜"
+            android:textColor="#2E2E2E"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
+            app:layout_constraintTop_toTopOf="@+id/evaluate_zuzu_img" />
+
+        <TextView
+            android:id="@+id/evaluate_zuzu_single_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="类型： 保湿补水 颜色：樱花粉嫩"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
+            app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_contont_tv" />
+
+        <TextView
+            android:id="@+id/evaluate_zuzu_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="描述相符"
+            android:textColor="#130202"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_img" />
+
+        <com.hedgehog.ratingbar.RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/evaluate_zuzu_price_tv"
+            app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_price_tv"
+            app:layout_constraintTop_toTopOf="@+id/evaluate_zuzu_price_tv"
+            hedgehog:clickable="true"
+            hedgehog:halfstart="true"
+            hedgehog:starCount="5"
+            hedgehog:starEmpty="@mipmap/star_empty"
+            hedgehog:starFill="@mipmap/star_full"
+            hedgehog:starHalf="@mipmap/star_full"
+            hedgehog:starImageHeight="@dimen/d40"
+            hedgehog:starImageWidth="@dimen/d50" />
+<!-- hedgehog:starHalf="@mipmap/star_half"-->
+        <TextView
+            android:id="@+id/very_good_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="4dp"
+            android:text="非常好"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingbar"
+            app:layout_constraintStart_toEndOf="@+id/ratingbar"
+            app:layout_constraintTop_toTopOf="@+id/ratingbar" />
+
+        <TextView
+            android:id="@+id/good_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="4dp"
+            android:text="好"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingbar"
+            app:layout_constraintStart_toEndOf="@+id/ratingbar"
+            app:layout_constraintTop_toTopOf="@+id/ratingbar" />
+
+        <TextView
+            android:id="@+id/ordinary_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="4dp"
+            android:text="一般"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingbar"
+            app:layout_constraintStart_toEndOf="@+id/ratingbar"
+            app:layout_constraintTop_toTopOf="@+id/ratingbar" />
+
+        <TextView
+            android:id="@+id/veary_bad_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="4dp"
+            android:text="非常差"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingbar"
+            app:layout_constraintStart_toEndOf="@+id/ratingbar"
+            app:layout_constraintTop_toTopOf="@+id/ratingbar" />
+
+        <ImageView
+            android:id="@+id/edit_img"
+            android:layout_width="@dimen/d40"
+            android:layout_height="@dimen/d50"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/bi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/evaluate_zuzu_price_tv" />
+
+        <EditText
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_size_14"
+            android:layout_marginTop="18dp"
+            android:background="@null"
+            android:hint="请输入内容"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/ratingbar"
+            app:layout_constraintLeft_toLeftOf="@+id/evaluate_zuzu_price_tv"/>
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d50"
+            android:text="从多个角度评价宝贝，可以帮助更多想买的人"
+            android:textColor="#BDBCBC"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/edit_img"
+            app:layout_constraintStart_toStartOf="@+id/edit_img"
+            app:layout_constraintTop_toTopOf="@id/edit_img" />
+
+        <ImageView
+            android:id="@+id/jiahao_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d200"
+            android:src="@mipmap/jiahao2"
+            app:layout_constraintLeft_toLeftOf="@id/edit_img"
+            app:layout_constraintTop_toBottomOf="@id/content_tv" />
+
+        <TextView
+            android:id="@+id/public_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/d12"
+            android:layout_marginBottom="@dimen/d12"
+            android:text="公开"
+            android:textColor="#DD2525"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/jiahao_img"
+            app:layout_constraintTop_toBottomOf="@id/jiahao_img" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="@dimen/d12"
+            android:text="公开头像昵称，大家可以看到我主页"
+            android:textColor="#BDBCBC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d10"
+        android:elevation="2dp"
+        android:background="@drawable/card_style">
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="阳阳的店"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="物流服务"
+            android:textColor="#131313"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="服务态度"
+            android:textColor="#131313"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <com.hedgehog.ratingbar.RatingBar
+            android:id="@+id/xing_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintLeft_toRightOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            hedgehog:clickable="true"
+            hedgehog:halfstart="true"
+            hedgehog:starCount="5"
+            hedgehog:starEmpty="@mipmap/star_empty"
+            hedgehog:starFill="@mipmap/star_full"
+            hedgehog:starHalf="@mipmap/star_full"
+            hedgehog:starImageHeight="@dimen/d40"
+            hedgehog:starImageWidth="@dimen/d50" />
+<!--      hedgehog:starHalf="@mipmap/star_half"-->
+        <com.hedgehog.ratingbar.RatingBar
+            android:id="@+id/xing_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintLeft_toRightOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6"
+            hedgehog:clickable="true"
+            hedgehog:halfstart="true"
+            hedgehog:starCount="5"
+            hedgehog:starEmpty="@mipmap/star_empty"
+            hedgehog:starFill="@mipmap/star_full"
+            hedgehog:starHalf="@mipmap/star_full"
+            hedgehog:starImageHeight="@dimen/d40"
+            hedgehog:starImageWidth="@dimen/d50" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--hedgehog:starHalf="@mipmap/star_half"-->
+</LinearLayout>

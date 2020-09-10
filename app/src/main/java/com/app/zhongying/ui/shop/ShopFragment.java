@@ -1,5 +1,6 @@
 package com.app.zhongying.ui.shop;
 
+import android.content.Intent;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
@@ -9,6 +10,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -22,6 +24,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.adapter.ShoppingActivity;
+
+import butterknife.BindView;
 import com.app.zhongying.ui.shop.adapter.DataAdapter;
 import com.app.zhongying.ui.shop.adapter.VpAdapter;
 import com.app.zhongying.ui.shop.common.VideoItemDecoration;
