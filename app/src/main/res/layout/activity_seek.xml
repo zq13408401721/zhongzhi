@@ -5,173 +5,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SeekActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/layout"
-    android:background="@color/white">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <TextView
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/backgrond_item"
-        android:layout_weight="2"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="取消"
-        android:id="@+id/tv_cancel"
-        android:layout_marginRight="10dp"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="18dp"
-        />
-</LinearLayout>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="18dp"
-    android:text="搜索"
-    android:textSize="15sp"
-    android:textColor="@color/test"
-    android:layout_marginLeft="180dp"/>
-    <ImageView
-    android:layout_width="30dp"
-    android:layout_height="15sp"
-    android:layout_marginTop="20dp"
-        android:src="@drawable/ic_search_black_24dp"
-    android:layout_marginLeft="140dp"/>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/layout"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv1"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/backgrond_item"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:hint="取消"
+            android:id="@+id/tv_cancel"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18dp"
+            />
+    </LinearLayout>
+    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="最近搜索"
-        android:layout_marginLeft="10dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:id="@+id/tv_recentlyseek"
-        android:textColor="@color/color_text_02"
-        android:layout_below="@id/layout"/>
+        android:layout_marginTop="3dp"
+        android:hint="搜索"
+        android:id="@+id/et_seek"
+        android:textSize="15sp"
+        android:textColor="@color/test"
+        android:layout_marginLeft="180dp"/>
     <ImageView
-        android:layout_marginTop="10dp"
+        android:layout_width="30dp"
+        android:layout_height="15sp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/moreArrow"
+        android:src="@drawable/ic_search_black_24dp"
+        android:layout_marginLeft="140dp"/>
+    <!--        -->
+    <ImageView
+        android:id="@+id/iv_delet"
         android:layout_width="30dp"
         android:layout_height="25dp"
         android:layout_below="@id/layout"
-        android:id="@+id/iv_delet"
-        android:src="@drawable/delet"
-        android:layout_alignParentRight="true" />
-
-    <LinearLayout
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="6dp"
-        android:id="@+id/layout1"
-        android:layout_below="@id/tv_recentlyseek">
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/textbackgrond_item"
-            android:text="蔻翠堂彩妆"
-            android:textColor="@color/color_text_02"
-            android:gravity="center"
-            />
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="30dp"
-            android:background="@drawable/textbackgrond_item"
-            android:text="蔻翠堂彩妆"
-            android:gravity="center"
-            android:textColor="@color/color_text_02"
-            android:layout_marginLeft="20dp"/>
-
-    </LinearLayout>
-    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/delet" />
+    <RelativeLayout
+        android:id="@+id/aaa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_recentlyseek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最近搜索"
+            android:textColor="@color/color_text_02"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <com.app.zhongying.adapter.FlowLayout
+            android:id="@+id/fl_search_records"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_recentlyseek"
+            app:is_limit="true"
+            app:limit_line_count="3"
+            app:max_select="3"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_hotdoreseek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aaa"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="热门搜索"
-        android:layout_marginLeft="10dp"
-
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:id="@+id/tv_hotdoreseek"
         android:textColor="@color/color_text_02"
-        android:layout_below="@id/layout1"/>
-    <LinearLayout
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:id="@+id/layout2"
-        android:layout_marginLeft="6dp"
-        android:layout_below="@id/tv_hotdoreseek">
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="30dp"
-            android:background="@drawable/textbackgrond_item"
-            android:text="蔻翠堂彩妆"
-            android:gravity="center"
-            android:textColor="@color/color_text_02"
-            android:layout_marginLeft="20dp"
-            />
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="30dp"
-            android:background="@drawable/textbackgrond_item"
-            android:text="蔻翠堂彩妆"
-            android:gravity="center"
-            android:textColor="@color/color_text_02"
-            android:layout_marginLeft="20dp"/>
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="30dp"
-            android:background="@drawable/textbackgrond_item"
-            android:text="捕风捉影"
-            android:gravity="center"
-            android:textColor="@color/color_text_02"
-            android:layout_marginLeft="20dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
-        android:id="@+id/layout3"
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout3"
         android:layout_marginLeft="6dp"
-        android:layout_below="@id/layout2">
+        android:layout_marginTop="20dp">
+
         <TextView
             android:layout_width="90dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/textbackgrond_item"
-            android:text="蔻翠堂彩妆"
-            android:textColor="@color/color_text_02"
             android:gravity="center"
-            />
+            android:text="蔻翠堂彩妆"
+            android:textColor="@color/color_text_02" />
+
         <TextView
             android:layout_width="90dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
             android:background="@drawable/textbackgrond_item"
-            android:text="蔻翠堂彩妆"
             android:gravity="center"
-            android:textColor="@color/color_text_02"
-            android:layout_marginLeft="20dp"/>
+            android:text="蔻翠堂彩妆"
+            android:textColor="@color/color_text_02" />
+
         <TextView
             android:layout_width="90dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
             android:background="@drawable/textbackgrond_item"
-            android:text="蔻翠堂彩妆"
             android:gravity="center"
-            android:textColor="@color/color_text_02"
-            android:layout_marginLeft="20dp"/>
+            android:text="捕风捉影"
+            android:textColor="@color/color_text_02" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hotdoreseek"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/textbackgrond_item"
+            android:gravity="center"
+            android:text="蔻翠堂彩妆"
+            android:textColor="@color/color_text_02" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/textbackgrond_item"
+            android:gravity="center"
+            android:text="蔻翠堂彩妆"
+            android:textColor="@color/color_text_02" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/textbackgrond_item"
+            android:gravity="center"
+            android:text="蔻翠堂彩妆"
+            android:textColor="@color/color_text_02" />
     </LinearLayout>
 </RelativeLayout>
