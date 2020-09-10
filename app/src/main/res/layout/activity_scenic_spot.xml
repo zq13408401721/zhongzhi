@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include_scenic"
+        layout="@layout/toolbar_scenic_spot_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/include_scenic">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:background="@drawable/scenic_bg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="130dp"
+                android:background="@drawable/shape_cl_bg_show"
+                android:padding="20dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txt_name_scenic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="洛阳老君山"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_synopsis_scenic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="演出介绍/购票须知/路线"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_name_scenic" />
+
+                <ImageView
+                    android:id="@+id/img_into_scenic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_arrows_right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_name_scenic" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_synopsis_scenic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_show_bg"
+                    android:padding="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_synopsis_scenic">
+
+                    <ImageView
+                        android:id="@+id/img_clock_scenic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/img_clock"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="8:00 - 17:30"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@id/img_clock_scenic"
+                        app:layout_constraintLeft_toRightOf="@id/img_clock_scenic"
+                        app:layout_constraintTop_toTopOf="@id/img_clock_scenic" />
+
+                    <ImageView
+                        android:id="@+id/img_local_scenic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_clock_scenic"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/img_local"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_clock_scenic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_local_scenic"
+                        android:text="河南省洛阳市来县城南3公里处"
+                        app:layout_constraintBottom_toBottomOf="@id/img_local_scenic"
+                        app:layout_constraintLeft_toRightOf="@id/img_local_scenic"
+                        app:layout_constraintTop_toTopOf="@id/img_local_scenic" />
+
+                    <ImageView
+                        android:id="@+id/img_hint_scenic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_local_scenic"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/img_hint"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_local_scenic" />
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="本票品为第三方电子票，需提前下单，客服工作时间为：9:00 - 18:00，下单前5分钟之内未收到验证短信请拨打客服电话：135-2618-9855"
+                        app:layout_constraintLeft_toRightOf="@id/img_hint_scenic"
+                        app:layout_constraintTop_toTopOf="@id/img_hint_scenic" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/txt_ticket_select_scenic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="票种选择"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl_synopsis_scenic" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_scenic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/txt_ticket_select_scenic" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_scenic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tab_scenic" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

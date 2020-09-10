@@ -3,4 +3,78 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#9A9A9A</color>
+    <color name="colorGray_200">#595959</color>
+    <color name="colorRed">#FF3939</color>
+    <color name="colorPink">#FFC8DE</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#007aff</color>
+
+    <color name="transparent">#00000000</color>
+    <!--AlertView-->
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <color name="bgColor_alertview_alert_start">#f0f0f0</color>
+    <!--线条颜色-->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--点击颜色-->
+    <color name="bgColor_alert_button_press">#EAEAEA</color>
+    <!--输入框底部线条-->
+    <color name="button">#F8F8F8</color>
+
+    <color name="color_27CCCCCC">#27CCCCCC</color>
+    <color name="color_d6d6d6">#d6d6d6</color>
+    <color name="color_e6e6e6">#e6e6e6</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_C6002A">#C6002A</color>
+
+    <color name="color6E6E6E">#6E6E6E</color>
+    <color name="color81F28E">#81F28E</color>
+    <color name="colorFFFFFF">#FFFFFF</color>
+    <color name="color4D504E">#4D504E</color>
+    <color name="colorC1FFDC">#C1FFDC</color>
+    <color name="colorF9DDB7">#F9DDB7</color>
+    <color name="color999999">#999999</color>
+    <color name="color666666">#666666</color>
+    <color name="color94FFA3">#94FFA3</color>
+    <color name="colorF9F9F9">#F5F5F5</color>
+    <color name="colorffff6100">#ffff6100</color>
+    <color name="colorFFC900">#1AFFC900</color>
+    <color name="color888888">#888888</color>
+    <color name="colorFFCE4E">#FFCE4E</color>
+    <color name="colorE8E8E8">#E8E8E8</color>
+    <color name="colorEBD4B8">#EBD4B8</color>
+    <color name="colorCA9D66">#CA9D66</color>
+    <color name="colorF4E7D4">#F4E7D4</color>
+    <color name="colorFF6100">#FF6100</color>
+    <color name="colorF8F8F8">#F8F8F8</color>
+    <color name="colorFF6900">#FF6900</color>
+    <color name="colorE5E4E4">#E9E9E9</color>
+    <color name="color_EAECF0">#EAECF0</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_F7F5EA">#F7F5EA</color>
+    <color name="color_41A9E8">#41A9E8</color>
+    <color name="color_E7E0D9">#E7E0D9</color>
+    <color name="color_CA9D66">#CA9D66</color>
+    <color name="c_ffffff">#ffffff</color>
+    <color name="c_eeeeee">#EEEEEE</color>
+    <color name="c_f8f8f8">#f8f8f8</color>
+    <color name="vedio_tv_bg">#6f000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_lucency">#9fFFFFFF</color>
+    <color name="c_74413737">#7f0B0B0B</color>
+    <color name="colorwhite">#fafafa</color>
+    <color name="colorBack">#000000</color>
+    <color name="colorGreen">#5AE45F</color>
+    <color name="colorYellow">#F8E53C</color>
+    <color name="colorhui">#BABDBD</color>
+    <color name="hong">#F44336</color>
+    <color name="hui">#AFADAC</color>
+    <color name="colorYes">#CF453D</color>
+    <color name="colorNo">#929292</color>
 </resources>
