@@ -57,6 +57,7 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "1234234", Toast.LENGTH_SHORT).show();
+                mRegister_ver.setClickable(false);
                 CountDownTimer timer = new CountDownTimer(60000, 1000) {
                     @Override
                     public void onTick(long l) {
@@ -66,6 +67,7 @@ public class RegisterFragment extends Fragment {
                     @Override
                     public void onFinish() {
                         mRegister_ver.setText("获取验证码");
+                        mRegister_ver.setClickable(true);
                     }
                 };
                 timer.start();
@@ -101,10 +103,10 @@ public class RegisterFragment extends Fragment {
         mRegister_visi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mRegister_visi.isSelected()) {
-                    mRegister_pwd.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                if (mRegister_pwd.getInputType()==129) {
+                    mRegister_pwd.setInputType(128);
                 } else {
-                    mRegister_pwd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    mRegister_pwd.setInputType(129);
                 }
             }
         });

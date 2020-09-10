@@ -48,6 +48,7 @@ public class ForgetActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (StringUtils.isMobile(mForgetPhone.getText().toString())) {
+                    mForgetVer.setClickable(false);
                     CountDownTimer timer = new CountDownTimer(60000, 1000) {
                         @Override
                         public void onTick(long l) {
@@ -57,6 +58,7 @@ public class ForgetActivity extends AppCompatActivity {
                         @Override
                         public void onFinish() {
                             mForgetVer.setText("点击获取验证码");
+                            mForgetVer.setClickable(true);
                         }
                     };
                     timer.start();

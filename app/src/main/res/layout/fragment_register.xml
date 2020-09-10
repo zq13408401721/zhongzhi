@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/register_ver"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:background="@drawable/cicrle_shap"
         android:text="点击获取验证码"
         android:textColor="#ffffff"

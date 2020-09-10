@@ -26,6 +26,9 @@ import androidx.fragment.app.Fragment;
 import com.app.zhongying.R;
 import com.app.zhongying.ui.own.login.activitys.ForgetActivity;
 
+import static android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD;
+import static android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD;
+
 public class LoginFragment extends Fragment {
 
     private EditText mPhone;
@@ -128,11 +131,14 @@ public class LoginFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                if (mVisi.isSelected()) {
-                    mPwd.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                if (mPwd.getInputType()==129) {
+                  //  mPwd.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    mPwd.setInputType(128);
                 } else {
-                    mPwd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    //mPwd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    mPwd.setInputType(129);
                 }
+
             }
         });
     }
