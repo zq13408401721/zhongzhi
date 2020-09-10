@@ -20,35 +20,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.home.activity.RecommendActivity"></activity>
-        <activity android:name=".activity.EventAcitivity"/>
-        <activity android:name=".ui.home.activity.SeekActivity"/>
-        <activity android:name=".ui.own.activities.MyLoveActivity"/>
-        <activity android:name=".ui.home.activity.ArticledetailsActivity"/>
-        <activity android:name=".ui.live.FinalBroadcaseActivity"/>
-        <activity android:name=".ui.own.MyStoreActivity"/>
-        <activity android:name=".activity.own.ServiceActivity"/>
-        <activity android:name=".activity.own.ResumeActivity"/>
-        <activity android:name=".ui.ticketing.activity.ScenicSpotActivity"/>
-        <activity android:name=".activity.own.MarketingActivity"/>
-        <activity android:name=".activity.own.Modify_DateActivity"/>
+        <activity android:name=".ui.live.FriendsActivity"></activity>
+        <activity android:name=".ui.live.HomePageActivity" />
+        <activity
+            android:name=".ui.own.SettingsActivity" android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".ui.live.FinalBroadcaseActivity" />
+        <activity android:name=".ui.live.VideoActivity" />
+        <activity android:name=".ui.live.StreamingActivity" />
+        <activity android:name=".ui.own.activities.MessageActivity"/>
         <activity android:name=".activity.own.Modify_userActivity"/>
+        <activity android:name=".activity.EventAcitivity"/>
+        <activity android:name=".activity.own.Modify_DateActivity"/>
         <activity android:name=".activity.own.Modify_nameActivity"/>
+        <activity android:name=".activity.own.ResumeActivity"/>
+        <activity android:name=".activity.own.ServiceActivity"/>
+        <activity android:name=".ui.home.activity.ArticledetailsActivity"/>
+        <activity android:name=".ui.home.activity.RecommendActivity"/>
+        <activity android:name=".ui.home.activity.SeekActivity"/>
+        <activity android:name=".ui.own.FillInformationActivity"/>
+        <activity android:name=".ui.own.login.activitys.ForgetActivity"/>
+        <activity android:name=".ui.own.login.activitys.ReviseActivity"/>
+        <activity android:name=".ui.own.login.LoginActivity"/>
+        <activity android:name=".ui.own.mywallet.MyWalletActivity"/>
+        <activity android:name=".ui.own.mywallet.mywalletfragments.BankAddActivity"/>
+        <activity android:name=".ui.own.MyStoreActivity"/>
+        <activity android:name=".ui.own.personal_stores.Personal_StoresActivity"/>
+        <activity android:name=".ui.ticketing.activity.HotelActivity"/>
         <activity android:name=".ui.ticketing.activity.MovieActivity"/>
         <activity android:name=".ui.ticketing.activity.ReserveActivity"/>
-        <activity android:name=".ui.ticketing.activity.HotelActivity"/>
+        <activity android:name=".ui.ticketing.activity.ScenicSpotActivity"/>
         <activity android:name=".ui.ticketing.activity.ShowTicketActivity"/>
-        <activity android:name=".ui.own.login.activitys.ForgetActivity"/>
-        <activity android:name=".ui.own.activities.MessageActivity"/>
-        <activity android:name=".ui.own.personal_stores.Personal_StoresActivity"></activity>
-        <activity android:name=".ui.own.FootprintActivity" />
-        <activity android:name=".ui.own.mywallet.MyWalletActivity" />
-        <activity android:name=".ui.own.mywallet.mywalletfragments.BankAddActivity" />
-        <activity android:name=".ui.own.ProductManageActivity" />
-
-        <activity android:name=".ui.own.SettingsActivity" />
-        <activity android:name=".ui.own.FillInformationActivity"></activity>
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
@@ -58,7 +59,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ui.own.activities.MyLoveActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

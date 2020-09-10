@@ -1,28 +1,29 @@
 package com.app.zhongying.ui.live;
 
+import android.graphics.LinearGradient;
+import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.InputType;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.zhongying.R;
-import com.app.zhongying.adapter.RlvAdapter;
 import com.app.zhongying.common.LoveLayout;
+import com.app.zhongying.ui.live.fragment.LiveasRlvAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,10 +34,15 @@ public class StreamingActivity extends AppCompatActivity implements View.OnClick
     private ImageView stream_exit;
     private ImageView stream_praise;
     private ImageView stream_gift;
+    private ImageView video_cut;
+    private ImageView imageView2;
     private LoveLayout stream_love;
     private ConstraintLayout cl;
     private RecyclerView mRecyclerView;
     private EditText mEditText;
+    private RecyclerView Live_Streaming_rlv;
+    private LiveasRlvAdapter mAdapters;
+    private Button btnPk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +72,10 @@ public class StreamingActivity extends AppCompatActivity implements View.OnClick
 
     private void initView() {
 
+        btnPk = findViewById(R.id.btnPK);
         stream_exit = (ImageView) findViewById(R.id.stream_exit);
+        imageView2 = (ImageView) findViewById(R.id.imageView2);
+        video_cut = (ImageView) findViewById(R.id.video_cut);
         stream_praise = (ImageView) findViewById(R.id.stream_praise);
         stream_gift = (ImageView) findViewById(R.id.stream_gift);
         stream_love = (LoveLayout) findViewById(R.id.stream_love);
@@ -76,10 +85,33 @@ public class StreamingActivity extends AppCompatActivity implements View.OnClick
         stream_gift.setOnClickListener(this);
         stream_praise.setOnClickListener(this);
         mEditText = findViewById(R.id.Live_Streaming_EditText);
+        Live_Streaming_rlv = findViewById(R.id.Live_Streaming_rlv);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         LiveRlvAdapter mAdapter = new LiveRlvAdapter(this, 56300000);
         mRecyclerView.setAdapter(mAdapter);
+
+        Live_Streaming_rlv.setLayoutManager(new LinearLayoutManager(this));
+        mAdapters = new LiveasRlvAdapter(this);
+        Live_Streaming_rlv.setAdapter(mAdapters);
+
+
+        mEditText.setOnKeyListener(new View.OnKeyListener() {
+
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                //这里注意要作判断处理，ActionDown、ActionUp都会回调到这里，不作处理的话就会调用两次
+                if (KeyEvent.KEYCODE_ENTER == keyCode && KeyEvent.ACTION_DOWN == event.getAction()) {
+                    //处理事件
+                    mAdapters.addData(mEditText.getText().toString());
+                    mEditText.setText("");
+                    Live_Streaming_rlv.scrollToPosition(mAdapters.getItemCount() - 1);
+
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     private void pop() {
@@ -118,5 +150,6 @@ public class StreamingActivity extends AppCompatActivity implements View.OnClick
         });
 
         stream_gift.bringToFront();
+
     }
 }

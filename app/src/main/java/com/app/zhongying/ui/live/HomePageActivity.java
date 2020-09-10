@@ -18,22 +18,7 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     private void initView() {
-
-        findViewById(R.id.Live_TextView_Collection).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomePageActivity.this, FriendsActivity.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.Live_TextView_Fans).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomePageActivity.this, FriendsActivity.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.Live_TextView_Follow).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.clFollow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomePageActivity.this, FriendsActivity.class);

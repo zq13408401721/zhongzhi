@@ -37,7 +37,7 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
     @BindView(R.id.vp)
     ViewPager viewPager;
 
-    String[] titles = {"互动消息","私信回复"};
+    String[] titles = {"互动消息", "私信回复"};
     private List<Fragment> fragments;
 
     @Override
@@ -65,20 +65,21 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (unbinder != null){
+        if (unbinder != null) {
             unbinder.unbind();
         }
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.img_back:
                 finish();
                 break;
         }
     }
-    public class VpAdapter extends FragmentPagerAdapter{
+
+    public class VpAdapter extends FragmentPagerAdapter {
 
         public VpAdapter(@NonNull FragmentManager fm) {
             super(fm);

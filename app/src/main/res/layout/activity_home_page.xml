@@ -53,19 +53,22 @@
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
+                android:singleLine="true"
                 android:text="抱抱是猫猫"
                 android:textColor="@color/c_ffffff"
                 android:textSize="16sp"
                 app:layout_constraintLeft_toRightOf="@id/ivHeadr"
+                app:layout_constraintRight_toLeftOf="@id/tvUnfollow"
                 app:layout_constraintTop_toTopOf="@+id/ivHeadr" />
 
             <TextView
+                android:id="@+id/tvUnfollow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="@dimen/dp_8"
                 android:background="@drawable/shape_unfollow"
                 android:paddingLeft="10dp"
                 android:paddingTop="5dp"
@@ -80,7 +83,7 @@
                 layout="@layout/layout_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
+                android:layout_marginRight="@dimen/dp_10"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tvName"
                 tools:layout_editor_absoluteX="288dp"
@@ -98,6 +101,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvName" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFollow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

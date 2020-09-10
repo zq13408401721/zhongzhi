@@ -1,84 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/bgColor_overlay"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/bgColor_overlay">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/Live_Item_ImageView_i"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/aixin" />
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/Live_Item_ImageView_ii"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/jinyuanbao" />
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_i"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_13"
+                    android:src="@mipmap/aixin" />
 
-            <ImageView
-                android:id="@+id/Live_Item_ImageView_iii"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/rocket__easyi" />
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_ii"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_13"
+                    android:src="@mipmap/jinyuanbao" />
 
-            <ImageView
-                android:id="@+id/Live_Item_ImageView_vi"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/zan" />
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_iii"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_15"
+                    android:src="@mipmap/liwu" />
 
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_vi"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_15"
+                    android:src="@mipmap/zan" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ll">
+
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_v"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_13"
+                    android:src="@mipmap/youting" />
+
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_vii"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_15"
+                    android:src="@mipmap/shu" />
+
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_viii"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_15"
+                    android:src="@mipmap/rocket__easyi" />
+
+                <ImageView
+                    android:id="@+id/Live_Item_ImageView_x"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_13"
+                    android:src="@mipmap/hua" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_140"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
             <ImageView
-                android:id="@+id/Live_Item_ImageView_v"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/youting" />
+                android:id="@+id/live_Item_video_praise"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/zan"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
 
             <ImageView
-                android:id="@+id/Live_Item_ImageView_vii"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/shu" />
+                android:id="@+id/video_gift"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/liwu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/live_Item_video_praise" />
 
-            <ImageView
-                android:id="@+id/Live_Item_ImageView_viii"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/liwu" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
-                android:id="@+id/Live_Item_ImageView_x"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                android:layout_weight="1"
-                android:src="@mipmap/hua" />
-
-        </LinearLayout>
-
-    </LinearLayout>
 
 </FrameLayout>

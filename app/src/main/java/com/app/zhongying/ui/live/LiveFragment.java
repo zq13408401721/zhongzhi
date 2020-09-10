@@ -83,7 +83,7 @@ public class LiveFragment extends Fragment {
         startbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), VideoActivity.class);
+                Intent intent = new Intent(getContext(), StreamingActivity.class);
                 startActivity(intent);
             }
         });

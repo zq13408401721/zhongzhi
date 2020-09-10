@@ -69,12 +69,13 @@
             app:layout_constraintTop_toBottomOf="@+id/video_name" />
 
         <Button
+            android:id="@+id/btnPK"
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="7dp"
             android:background="@drawable/shape_attention"
-            android:text="+关注"
+            android:text="PK"
             android:textColor="@color/white"
             android:textSize="19dp"
             app:layout_constraintRight_toRightOf="parent"
@@ -90,6 +91,30 @@
         app:layout_constraintBottom_toBottomOf="@+id/stream_cl"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/stream_cl" />
+
+
+    <ImageView
+        android:id="@+id/video_cut"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/qiehuantuichu"
+        app:layout_constraintRight_toLeftOf="@+id/stream_exit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/huabanfuben"
+        app:layout_constraintRight_toLeftOf="@+id/video_cut"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/stream_usernumber"
@@ -114,6 +139,23 @@
         app:layout_constraintLeft_toRightOf="@+id/stream_usernumber"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/stream_usernumber" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_200"
+        app:layout_constraintBottom_toTopOf="@+id/Live_Streaming_EditText"
+        app:layout_constraintLeft_toLeftOf="@+id/Live_Streaming_EditText"
+        app:layout_constraintRight_toRightOf="@+id/Live_Streaming_EditText">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Live_Streaming_rlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdgeLength="@dimen/dp_60"
+            android:requiresFadingEdge="vertical"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <EditText
         android:id="@+id/Live_Streaming_EditText"
