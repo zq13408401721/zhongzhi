@@ -19,7 +19,6 @@
                 android:background="@drawable/tuichu"
                 android:layout_width="30dp"
                 android:layout_centerVertical="true"
-
                 android:layout_height="30dp"/>
             <TextView
                 android:id="@+id/date_title"

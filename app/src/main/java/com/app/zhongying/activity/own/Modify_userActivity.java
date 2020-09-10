@@ -2,7 +2,6 @@ package com.app.zhongying.activity.own;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +54,7 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
 
     private void initView() {
         returns = (ImageView) findViewById(R.id.returns);
+        returns.setOnClickListener(this);
         title = (TextView) findViewById(R.id.title);
         layout = (LinearLayout) findViewById(R.id.line);
         modify_head_img = (ImageView) findViewById(R.id.modify_head_img);

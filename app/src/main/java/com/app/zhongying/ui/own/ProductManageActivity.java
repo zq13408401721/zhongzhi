@@ -1,5 +1,6 @@
 package com.app.zhongying.ui.own;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,6 +15,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.zhongying.R;
+import com.app.zhongying.ui.own.fragment.store.AddProductFragment;
+import com.app.zhongying.ui.own.fragment.store.SellProductFragment;
+import com.app.zhongying.ui.own.fragment.store.WarehouseFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -33,8 +37,10 @@ public class ProductManageActivity extends AppCompatActivity {
     @BindView(R.id.viewPage)
     ViewPager viewPage;
 
-    String[] tabs={"添加商品","出售中","下架商品","仓库中","已售完"};
+    String[] tabs = {"添加商品", "出售中", "下架商品", "仓库中", "已售完"};
+
     private ArrayList<Fragment> fragments;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,27 +51,37 @@ public class ProductManageActivity extends AppCompatActivity {
     }
 
     private void initView() {
+
         toolbarTitle.setText("产品管理");
 
         fragments = new ArrayList<>();
-
+        fragments.add(new AddProductFragment());
+        fragments.add(new SellProductFragment());
         fragments.add(new OutOfPrintFragment());
-        fragments.add(new OutOfPrintFragment());
-        fragments.add(new OutOfPrintFragment());
-        fragments.add(new OutOfPrintFragment());
+        fragments.add(new WarehouseFragment());
         fragments.add(new OutOfPrintFragment());
 
         viewPage.setAdapter(new ViewPageAdapter(getSupportFragmentManager()));
         tab.setupWithViewPager(viewPage);
 
+        Intent intent = getIntent();
+
+        id = intent.getIntExtra("id", 0);
+
+        if (intent.hasExtra("id")==true){
+            tab.getTabAt(id).select();
+        }
+
 
     }
+
+
     @OnClick(R.id.iv_back)
-    public void onClickListener(View view){
+    public void onClickListener(View view) {
         finish();
     }
 
-    class ViewPageAdapter extends FragmentPagerAdapter{
+    class ViewPageAdapter extends FragmentPagerAdapter {
 
         public ViewPageAdapter(@NonNull FragmentManager fm) {
             super(fm);
