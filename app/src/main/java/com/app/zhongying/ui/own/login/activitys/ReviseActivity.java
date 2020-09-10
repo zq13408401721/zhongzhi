@@ -39,7 +39,7 @@ public class ReviseActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_revise:
-                if(mRevisePwd.getText().toString().equals(mRevisePwdSure.getText().toString())){
+                if (mRevisePwd.getText().toString().equals(mRevisePwdSure.getText().toString())) {
                     finish();
                 }
                 break;

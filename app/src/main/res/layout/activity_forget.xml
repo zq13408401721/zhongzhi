@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.own.login.activitys.ForgetActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="88px"
@@ -30,13 +31,14 @@
             android:textColor="#333333"
             android:textSize="33px" />
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/forget_phone"
@@ -44,6 +46,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@mipmap/phone"
             android:hint="请输入手机号"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -54,10 +57,10 @@
             android:layout_height="35dp"
             android:layout_alignRight="@id/forget_phone"
             android:background="@drawable/cicrle_shap"
+            android:inputType="number"
             android:text="点击获取验证码"
             android:textColor="#ffffff"
-            android:textSize="15sp"
-            />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/forget_verification"
@@ -66,17 +69,19 @@
             android:layout_below="@id/forget_phone"
             android:layout_marginTop="10dp"
             android:drawableLeft="@mipmap/verification"
-            android:hint="请输入验证码"/>
+            android:hint="请输入验证码"
+            android:inputType="number" />
+
         <Button
             android:id="@+id/btn_forget"
-            android:layout_below="@id/forget_verification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="下一步"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#ffffff"
+            android:layout_below="@id/forget_verification"
             android:layout_marginTop="80dp"
-            android:background="@drawable/cicrle_shap"/>
+            android:background="@drawable/cicrle_shap"
+            android:text="下一步"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
