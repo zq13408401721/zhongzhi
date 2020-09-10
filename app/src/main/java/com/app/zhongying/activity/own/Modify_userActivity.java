@@ -101,15 +101,8 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.modify_head:
-                View contentView = LayoutInflater.from(this).inflate(R.layout.head_popupwindow, null);
-                photograph = contentView.findViewById(R.id.photograph);
-                album = contentView.findViewById(R.id.album);
-                cancel = contentView.findViewById(R.id.cancel);
-                cancel.setOnClickListener(this);
-                popWnd = new PopupWindow(contentView,ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
 
-               popWnd.showAtLocation(layout, Gravity.CENTER_VERTICAL,0,0);
-
+                onphotograph();
 
                 break;
             case R.id.modify_name_img:
@@ -149,9 +142,7 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.modify_phone_img:
                 break;
-            case R.id.cancel:
-                popWnd.dismiss();
-                break;
+
             case R.id.cancel_sex:
                 popWnds.dismiss();
                 break;
