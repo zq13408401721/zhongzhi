@@ -44,7 +44,6 @@
         <activity android:name=".ui.ticketing.activity.ReserveActivity"/>
         <activity android:name=".ui.ticketing.activity.ScenicSpotActivity"/>
         <activity android:name=".ui.ticketing.activity.ShowTicketActivity"/>
-        <activity android:name=".ui.own.SettingsActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
