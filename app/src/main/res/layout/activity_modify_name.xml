@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#EAE7E7"
+    android:layout_height="match_parent"
+    tools:context=".activity.own.Modify_nameActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/name_returns"
+                android:background="@drawable/tuichu"
+                android:layout_width="30dp"
+                android:layout_centerVertical="true"
+                android:layout_height="30dp"/>
+            <TextView
+                android:id="@+id/name_title"
+                android:textSize="25dp"
+                android:text="修改昵称"
+                android:textColor="#000"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/name_preservation"
+                android:textSize="20dp"
+                android:text="保存   "
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+   <RelativeLayout
+       android:background="#fff"
+       android:layout_marginTop="20dp"
+       android:layout_width="match_parent"
+       android:padding="10dp"
+       android:layout_height="wrap_content">
+       <EditText
+          android:background="@null"
+           android:id="@+id/name_text"
+           android:textSize="20dp"
+
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+       <ImageView
+           android:visibility="gone"
+           android:id="@+id/eliminate"
+           android:layout_width="20dp"
+           android:background="@drawable/cha"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:layout_height="20dp"/>
+
+   </RelativeLayout>
+
+</LinearLayout>

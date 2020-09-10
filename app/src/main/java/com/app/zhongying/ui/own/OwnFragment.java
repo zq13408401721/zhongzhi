@@ -15,6 +15,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.app.zhongying.R;
+import com.app.zhongying.activity.own.Modify_userActivity;
+import com.app.zhongying.ui.own.activities.MessageActivity;
+import com.app.zhongying.ui.own.activities.MyLoveActivity;
+import com.app.zhongying.ui.own.mywallet.MyWalletActivity;
 
 public class OwnFragment extends Fragment implements View.OnClickListener {
 
@@ -133,6 +137,7 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             //我的页面头部跳转
             case R.id.own_head:
+                startActivity(new Intent(getContext(), Modify_userActivity.class));
                 break;
             //我的页面代付款跳转
             case R.id.own_Payment:
@@ -169,12 +174,14 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面我的钱包进入钱包跳转
             case R.id.own_jinru_money:
+                startActivity(new Intent(getContext(), MyWalletActivity.class));
                 break;
             //我的页面购物车跳转
             case R.id.gouwuche:
                 break;
             //我的页面消息中心跳转
             case R.id.xiaoxi:
+                startActivity(new Intent(getContext(), MessageActivity.class));
                 break;
             //我的页面我的足迹跳转
             case R.id.zuji:
@@ -187,9 +194,11 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的页面申请入驻/我的店铺跳转
             case R.id.shenqing:
+                startActivity(new Intent(getActivity(),FillInformationActivity.class));
                 break;
             //我的页面我的收藏跳转
             case R.id.shoucang:
+                startActivity(new Intent(getContext(), MyLoveActivity.class));
                 break;
             //我的页面设置跳转
             case R.id.shezhi:
