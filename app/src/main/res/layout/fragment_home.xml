@@ -4,20 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f8f8f8">
-        <ImageView
-            android:id="@+id/image_taskbar"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:background="@drawable/taskbar"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/image_bei"
@@ -26,7 +18,7 @@
             android:background="#fff"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_taskbar" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/ed_seek"
@@ -40,20 +32,20 @@
             android:textSize="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_taskbar" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:background="@drawable/banner"
             android:id="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="112.5dp"
+            android:background="@drawable/banner"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image_bei">
 
             <com.youth.banner.Banner
                 android:id="@+id/banner"
-                android:layout_width="360dp"
+                android:layout_width="match_parent"
                 android:layout_height="112.5dp"
                 android:background="@drawable/search_shap" />
         </LinearLayout>
@@ -63,7 +55,6 @@
             android:id="@+id/lll"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginLeft="15dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/ll">
@@ -72,6 +63,7 @@
                 android:id="@+id/tuijian"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -81,9 +73,9 @@
                     android:background="@mipmap/tuijian" />
 
                 <TextView
-                    android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="推荐"
                     android:textColor="#666666"
                     android:textSize="16dp" />
@@ -92,10 +84,10 @@
 
             <LinearLayout
                 android:id="@+id/remen"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="-3dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="-3dp"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -115,9 +107,9 @@
 
             <LinearLayout
                 android:id="@+id/wenchuang"
-                android:layout_marginLeft="35dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -127,9 +119,9 @@
                     android:background="@mipmap/wenchuang" />
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="文创"
                     android:textColor="#666666"
                     android:textSize="16dp" />
@@ -138,9 +130,9 @@
 
             <LinearLayout
                 android:id="@+id/wenlv"
-                android:layout_marginLeft="35dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -150,9 +142,9 @@
                     android:background="@mipmap/wenlv" />
 
                 <TextView
-                    android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="文旅"
                     android:textColor="#666666"
                     android:textSize="16dp" />
@@ -161,10 +153,9 @@
 
             <LinearLayout
                 android:id="@+id/yingshi"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -174,79 +165,80 @@
                     android:background="@mipmap/yingshi" />
 
                 <TextView
-                    android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="影视"
                     android:textColor="#666666"
                     android:textSize="16dp" />
 
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/llll"
-            android:background="#05000000"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/lll"
+            android:background="#05000000"
             android:orientation="vertical"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lll">
 
             <TextView
-                android:textSize="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="#333333"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="限时活动"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="限时活动"
+                android:textColor="#333333"
+                android:textSize="16dp" />
 
             <ImageView
                 android:id="@+id/image_Event"
-                android:layout_marginTop="10dp"
-                android:layout_width="360dp"
+                android:layout_width="match_parent"
                 android:layout_height="112.5dp"
-                android:background="@drawable/banner1"/>
+                android:layout_marginTop="10dp"
+                android:background="@drawable/banner1" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lllll"
-            android:background="#05000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/llll"
+            android:background="#05000000"
             android:orientation="vertical"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llll">
 
             <TextView
-                android:textSize="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="#333333"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="限时活动"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="限时活动"
+                android:textColor="#333333"
+                android:textSize="16dp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="10dp"
+                android:id="@+id/rv_featured"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rv_featured"/>
+                android:layout_marginTop="10dp" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="#80FFFFFF"
-                app:tabSelectedTextColor="#D31B1B"
-                app:tabIndicatorColor="#D31B1B"
                 app:tabIndicator="@drawable/meorder_tabwidth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                app:tabIndicatorColor="#D31B1B"
+                app:tabSelectedTextColor="#D31B1B" />
 
             <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:id="@+id/vp"/>
+                android:layout_height="500dp" />
         </LinearLayout>
 
 
