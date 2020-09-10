@@ -1,5 +1,6 @@
 package com.app.zhongying.ui.own.mywallet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -101,6 +102,10 @@ public class MyWalletActivity extends AppCompatActivity {
 
             }
         });
+        Intent intent = getIntent();
+        if (intent.hasExtra("id")==true){
+            wallet_tab.getTabAt(intent.getIntExtra("id",-1)).select();
+        }
     }
 
     private View getTabView(int currentPosition) {

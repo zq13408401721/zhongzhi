@@ -71,6 +71,8 @@
     <color name="colorwhite">#fafafa</color>
     <color name="colorBack">#000000</color>
     <color name="colorGreen">#5AE45F</color>
+    <color name="colorYellow">#F8E53C</color>
+    <color name="colorhui">#BABDBD</color>
     <color name="hong">#F44336</color>
     <color name="hui">#AFADAC</color>
     <color name="colorYes">#CF453D</color>
