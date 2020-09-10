@@ -10,36 +10,45 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:theme="@style/AppTheme">
         <activity android:name=".ui.home.activity.RecommendActivity"></activity>
-        <activity android:name=".activity.EventAcitivity" />
-        <activity android:name=".ui.home.activity.SeekActivity" />
-        <activity android:name=".ui.own.activities.MyLoveActivity" />
-        <activity android:name=".ui.home.activity.ArticledetailsActivity" />
+        <activity android:name=".activity.EventAcitivity"/>
+        <activity android:name=".ui.home.activity.SeekActivity"/>
+        <activity android:name=".ui.own.activities.MyLoveActivity"/>
+        <activity android:name=".ui.home.activity.ArticledetailsActivity"/>
+        <activity android:name=".ui.live.FinalBroadcaseActivity"/>
+        <activity android:name=".ui.own.MyStoreActivity"/>
+        <activity android:name=".activity.own.ServiceActivity"/>
+        <activity android:name=".activity.own.ResumeActivity"/>
+        <activity android:name=".ui.ticketing.activity.ScenicSpotActivity"/>
+        <activity android:name=".activity.own.MarketingActivity"/>
+        <activity android:name=".activity.own.Modify_DateActivity"/>
+        <activity android:name=".activity.own.Modify_userActivity"/>
+        <activity android:name=".activity.own.Modify_nameActivity"/>
+        <activity android:name=".ui.ticketing.activity.MovieActivity"/>
+        <activity android:name=".ui.ticketing.activity.ReserveActivity"/>
+        <activity android:name=".ui.ticketing.activity.HotelActivity"/>
+        <activity android:name=".ui.ticketing.activity.ShowTicketActivity"/>
+        <activity android:name=".ui.own.login.activitys.ForgetActivity"/>
+        <activity android:name=".ui.own.activities.MessageActivity"/>
         <activity android:name=".ui.own.personal_stores.Personal_StoresActivity"></activity>
-        <activity android:name=".activity.own.ServiceActivity" />
-        <activity android:name=".activity.own.Modify_DateActivity" />
-        <activity android:name=".activity.own.Modify_nameActivity" />
         <activity android:name=".ui.own.FootprintActivity" />
-        <activity android:name=".activity.own.ResumeActivity" />
         <activity android:name=".ui.own.mywallet.MyWalletActivity" />
         <activity android:name=".ui.own.mywallet.mywalletfragments.BankAddActivity" />
         <activity android:name=".ui.own.ProductManageActivity" />
-        <activity android:name=".ui.own.MyStoreActivity" />
+
         <activity android:name=".ui.own.SettingsActivity" />
         <activity android:name=".ui.own.FillInformationActivity"></activity>
-        <activity android:name=".ui.own.activities.MessageActivity"></activity>
-        <activity android:name=".activity.own.Modify_userActivity" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
