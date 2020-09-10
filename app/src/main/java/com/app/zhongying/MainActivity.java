@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navigation_ticketing:
                         tvTitle.setText(getResources().getString(R.string.title_ticketing));
-                        layoutTitle.setVisibility(View.VISIBLE);
+                        layoutTitle.setVisibility(View.GONE);
                         break;
                     case R.id.navigation_live:
                         tvTitle.setText(getResources().getString(R.string.title_live));
