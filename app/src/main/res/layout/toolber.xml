@@ -7,27 +7,25 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:background="#fff"
-        android:layout_height="?android:actionBarSize"
-        app:contentInsetStart="0dp"
-        app:contentInsetLeft="0dp">
+
+        android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
-            android:id="@+id/layout_back"
-            android:layout_width="50dp"
-            android:layout_height="match_parent">
+            android:id="@+id/returns"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_35">
             <ImageView
-                android:id="@+id/returns"
+
                 android:background="@drawable/group"
                 android:layout_width="@dimen/dp_20"
                 android:rotation="180"
-                android:layout_height="@dimen/dp_20"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dp_10"/>
-        </RelativeLayout>
+                android:layout_height="@dimen/dp_20"/>
 
+
+        </RelativeLayout>
         <TextView
             android:id="@+id/title"
             android:textSize="20dp"

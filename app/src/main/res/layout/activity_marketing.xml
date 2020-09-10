@@ -117,18 +117,18 @@
                android:id="@+id/dateye"
                android:layout_width="wrap_content"
                android:textSize="@dimen/dp_20"
-               android:text="2020年"
+               android:text="8月"
                android:layout_marginLeft="@dimen/dp_20"
                android:textColor="#D35353"
                android:layout_height="wrap_content"/>
            <ImageView
+               android:layout_marginLeft="@dimen/dp_25"
                android:layout_toRightOf="@id/dateye"
-               android:padding="@dimen/dp_20"
                android:layout_centerVertical="true"
                android:background="@drawable/group"
-               android:layout_width="@dimen/dp_25"
+               android:layout_width="wrap_content"
                android:rotation="90"
-               android:layout_height="@dimen/dp_25"/>
+               android:layout_height="wrap_content"/>
 
        </RelativeLayout>
        <RelativeLayout
@@ -144,18 +144,19 @@
                android:id="@+id/dateri"
                android:layout_width="wrap_content"
                android:textSize="@dimen/dp_20"
-               android:text="2020年"
+               android:text="28日"
+
                android:layout_marginLeft="@dimen/dp_20"
                android:textColor="#D35353"
                android:layout_height="wrap_content"/>
            <ImageView
                android:layout_toRightOf="@id/dateri"
-               android:padding="@dimen/dp_20"
+              android:layout_marginLeft="@dimen/dp_25"
                android:layout_centerVertical="true"
                android:background="@drawable/group"
-               android:layout_width="@dimen/dp_25"
+               android:layout_width="wrap_content"
                android:rotation="90"
-               android:layout_height="@dimen/dp_25"/>
+               android:layout_height="wrap_content"/>
 
        </RelativeLayout>
 
