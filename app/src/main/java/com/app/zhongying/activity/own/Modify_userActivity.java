@@ -1,6 +1,8 @@
 package com.app.zhongying.activity.own;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +22,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.aigestudio.wheelpicker.WheelPicker;
 import com.app.zhongying.R;
@@ -33,7 +37,7 @@ import java.util.List;
 
 public class Modify_userActivity extends AppCompatActivity implements View.OnClickListener, WheelPicker.OnItemSelectedListener {
 
-    private ImageView returns;
+    private RelativeLayout returns;
     private TextView title;
     private ImageView modify_head_img;
     private RelativeLayout modify_head;
@@ -67,7 +71,7 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void initView() {
-        returns = (ImageView) findViewById(R.id.returns);
+        returns = (RelativeLayout) findViewById(R.id.returns);
         returns.setOnClickListener(this);
         title = (TextView) findViewById(R.id.title);
         layout = (LinearLayout) findViewById(R.id.line);
@@ -97,7 +101,9 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.modify_head:
+
                 onphotograph();
+
                 break;
             case R.id.modify_name_img:
                 Intent nameintent = new Intent(this,Modify_nameActivity.class);
@@ -151,6 +157,13 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void onphotograph() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED){
+            //Toast.makeText(MainActivity.this,"您申请了动态权限",Toast.LENGTH_SHORT).show();
+        }else{
+            //否则去请求相机权限
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},100);
+
+        }
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             final AlertDialog dialog = builder.create();
         contentView = LayoutInflater.from(this).inflate(R.layout.head_popupwindow, null);
@@ -160,6 +173,12 @@ public class Modify_userActivity extends AppCompatActivity implements View.OnCli
         popWnd.showAtLocation(layout, Gravity.CENTER_VERTICAL,0,0);
         album = contentView.findViewById(R.id.album);
         cancel = contentView.findViewById(R.id.cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popWnd.dismiss();
+            }
+        });
         album.setOnClickListener(new View.OnClickListener() {// 在相册中选取
             @Override
             public void onClick(View v) {
