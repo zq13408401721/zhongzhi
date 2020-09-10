@@ -12,20 +12,20 @@
         android:id="@+id/ll"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
             android:id="@+id/img_back"
             android:src="@mipmap/icon_back"
             />
         <TextView
-            android:layout_marginLeft="140dp"
+            android:layout_marginLeft="@dimen/dp_140"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_title"
             android:text="订票"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dp_10"
             android:textColor="#000000"
             android:textSize="20sp"
             />
@@ -34,7 +34,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/topVp"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="@dimen/dp_180"
         app:layout_constraintTop_toBottomOf="@id/ll"
         android:layout_marginTop="10dp"
         android:background="#000000"
@@ -48,13 +48,13 @@
         android:textColor="#ffffff"
         android:background="@drawable/reserve_ivcount"
         android:text="1/5"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="@dimen/dp_120"
         android:textSize="22sp"
-        android:layout_marginRight="10dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
         />
     <LinearLayout
         android:orientation="vertical"
@@ -62,8 +62,8 @@
         android:layout_width="match_parent"
         android:background="@drawable/layout_reserve"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:padding="20dp">
+        android:layout_marginTop="@dimen/dp_160"
+        android:padding="@dimen/dp_20">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,13 +75,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tab"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dp_5"
             app:tabTextColor="@color/colorNo"
             app:tabSelectedTextColor="@color/colorYes"
             />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="@dimen/dp_2"
             android:background="#F5F5F5"
             />
         <TextView
@@ -89,27 +89,27 @@
             android:layout_height="wrap_content"
             android:text="荧屏"
             android:textSize="22sp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dp_5"
             android:textColor="#000000"
             android:gravity="center"
             />
         <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="@dimen/dp_220"
             android:id="@+id/vp"
             />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="@dimen/dp_2"
             android:background="#F5F5F5"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dp_5"
             />
         <RelativeLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dp_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="150dp"
+                android:layout_width="@dimen/dp_150"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_location"
                 android:text="4-3、4-4"
@@ -121,10 +121,10 @@
                 android:text="立即购票"
                 android:layout_alignParentRight="true"
                 android:textSize="18dp"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_10"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/reserve_gou"
