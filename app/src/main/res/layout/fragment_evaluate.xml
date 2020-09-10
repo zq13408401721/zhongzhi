@@ -22,11 +22,11 @@
                 android:id="@+id/evaluate_Individual_stores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/d20"
-                android:layout_marginTop="@dimen/d5"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:text="阳阳的店 >"
                 android:textColor="#0E0D0D"
-                android:textSize="@dimen/text_size_16"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,18 +34,18 @@
                 android:id="@+id/evaluate_zuzu_time_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/d5"
-                android:layout_marginEnd="@dimen/d20"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
                 android:text="2020-06-09 19：18：55"
-                android:textSize="@dimen/text_size_10"
+                android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@id/evaluate_Individual_stores"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/evaluate_zuzu_img"
-                android:layout_width="@dimen/d200"
-                android:layout_height="@dimen/d200"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/evaluate_img_shape"
@@ -60,7 +60,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="MARICE 魅力资女士素颜霜"
-                android:textSize="@dimen/text_size_14"
+                android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
                 app:layout_constraintTop_toTopOf="@+id/evaluate_zuzu_img" />
 
@@ -71,7 +71,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:text="单只   x1"
-                android:textSize="@dimen/text_size_12"
+                android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
                 app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_contont_tv" />
 
@@ -84,7 +84,7 @@
                 android:layout_marginBottom="16dp"
 
                 android:text="实付款  ￥  99.90"
-                android:textSize="@dimen/text_size_16"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_img" />
@@ -93,12 +93,12 @@
                 android:layout_marginBottom="10dp"
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/d50"
+                android:layout_height="25dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/evaluate_button_shape"
                 android:text="评价"
                 android:layout_marginTop="8dp"
-                android:textSize="@dimen/font_size1"
+                android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@id/evaluate_zuzu_price_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/evaluate_zuzu_price_tv" />
@@ -112,9 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="猜你喜欢"
-            android:padding="@dimen/text_size_10"
+            android:padding="10dp"
             android:layout_gravity="center"
-            android:textSize="@dimen/size_20"/>
+            android:textSize="20sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

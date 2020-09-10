@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="15dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="150dp">
+            <RadioButton
+                android:id="@+id/allorder_raiobnt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/allorder_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="交易成功"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/allorder_raiobnt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/allorder_time"
+                android:text="2020-06-09 19：18：55"
+                android:layout_width="wrap_content"
+                android:textSize="8sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/allorder_img"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_bg2"
+                app:layout_constraintLeft_toRightOf="@id/allorder_raiobnt"
+                app:layout_constraintTop_toBottomOf="@id/allorder_done" />
+
+            <TextView
+                android:id="@+id/allorder_content"
+                android:text="MARICE魅力资女士素颜霜"
+                android:textColor="#4E4A4A"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintTop_toBottomOf="@id/allorder_raiobnt"
+                app:layout_constraintLeft_toRightOf="@id/allorder_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/allorder_single"
+                android:text="单只 ×1"
+                android:textSize="10sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/allorder_content"
+                app:layout_constraintLeft_toRightOf="@id/allorder_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/allorder_payment"
+                android:textColor="#4E4D4D"
+                app:layout_constraintLeft_toRightOf="@id/allorder_raiobnt"
+                app:layout_constraintTop_toBottomOf="@id/allorder_img"
+                android:text="实付款 ¥ 99.90"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/allorder_afterdetail"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/gray_bnt_corner"
+                android:text="售后详情"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/allorder_payment"
+                app:layout_constraintLeft_toRightOf="@+id/allorder_payment" />
+            <Button
+                android:id="@+id/allorder_showorder"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/order_bnt_shape"
+                android:text="查看订单"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/allorder_payment"
+                app:layout_constraintLeft_toRightOf="@+id/allorder_afterdetail" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

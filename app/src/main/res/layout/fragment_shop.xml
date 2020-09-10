@@ -1,12 +1,41 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp"
+    tools:context=".MainActivity">
 
-    <!--<androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_aftersale_rv2"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />-->
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_item" android:id="@+id/mTool"/>
+        <com.youth.banner.Banner
+            android:id="@+id/banner_shop"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/banner_shop" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_shop"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:layout_constraintTop_toBottomOf="@id/tab_shop" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

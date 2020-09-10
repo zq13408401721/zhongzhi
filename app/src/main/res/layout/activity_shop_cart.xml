@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".ui.shop.activity.ShopCartActivity">
+
+    <include
+        android:id="@+id/mTool"
+        layout="@layout/toolbar_item"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/mTool">
+
+        <TextView
+            android:id="@+id/tv_fen"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <TextView
+            android:id="@+id/tv_shopNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="\t\t共9件商品" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="62dp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <CheckBox
+            android:id="@+id/cb_all"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/cb_all"
+            android:text="全选"
+            android:textSize="9dp" />
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_shop_pay"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:text="结算"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_shop_pay"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:text="删除"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@id/tv_pay"
+            android:text="合计：¥0"
+            android:textColor="#000"
+            android:textSize="14dp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

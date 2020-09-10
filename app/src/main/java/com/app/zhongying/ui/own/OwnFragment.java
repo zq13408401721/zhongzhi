@@ -1,5 +1,6 @@
 package com.app.zhongying.ui.own;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zhongying.R;
 import com.app.zhongying.ui.adapter.EvaluateAdapter;
+import com.app.zhongying.ui.own.meorder.MeOrderActivity;
 
 public class OwnFragment extends Fragment {
 
@@ -40,6 +42,14 @@ public class OwnFragment extends Fragment {
     }
 
     private void initView(View view) {
+        TextView own_text = view.findViewById(R.id.own_text);
+        own_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MeOrderActivity.class);
+                startActivity(intent);
+            }
+        });
       /*  evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
         evaluate_zuzu_time_tv = view.findViewById(R.id.evaluate_zuzu_time_tv);
         evaluate_zuzu_img = view.findViewById(R.id.evaluate_zuzu_img);

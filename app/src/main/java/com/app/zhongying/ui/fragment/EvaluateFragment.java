@@ -42,7 +42,7 @@ public class EvaluateFragment extends Fragment {
     }
 
     private void initView(View view) {
-        evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
+       /* evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
         evaluate_zuzu_time_tv = view.findViewById(R.id.evaluate_zuzu_time_tv);
         evaluate_zuzu_img = view.findViewById(R.id.evaluate_zuzu_img);
         evaluate_zuzu_contont_tv = view.findViewById(R.id.evaluate_zuzu_contont_tv);
@@ -63,6 +63,6 @@ public class EvaluateFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), EvaluateActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }

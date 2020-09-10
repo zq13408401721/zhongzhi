@@ -1,4 +1,4 @@
-package com.app.zhongying.ui.fragment;
+package com.app.zhongying.ui.own.meorder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.app.zhongying.R;
 
-public class EvaluateActivity extends AppCompatActivity {
+public class ShowOrderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evaluate);
+        setContentView(R.layout.activity_show_order);
     }
 }

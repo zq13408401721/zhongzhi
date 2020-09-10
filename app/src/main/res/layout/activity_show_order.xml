@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    android:orientation="vertical"
+    tools:context=".ui.own.meorder.ShowOrderActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="订单详情"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/icon_mistake"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="\t\t订单已取消"
+            android:textColor="#ED1111"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/showorder_iv_location"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/icon_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/showorder_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="用户姓名"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/showorder_iv_location"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/showorder_tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="152****5453"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/showorder_tv_name"
+            app:layout_constraintTop_toTopOf="@id/showorder_tv_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:maxEms="13"
+            android:text="北京朝阳区高碑店村水南庄13号楼一单元"
+            app:layout_constraintLeft_toRightOf="@id/showorder_iv_location"
+            app:layout_constraintTop_toBottomOf="@id/showorder_tv_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/showorder_iv_img"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/img_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/showorder_tv_commodityname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="MARICE魅力资女士素颜霜"
+            android:textColor="#323131"
+            app:layout_constraintLeft_toRightOf="@id/showorder_iv_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="单只 X1"
+            app:layout_constraintLeft_toRightOf="@id/showorder_iv_img"
+            app:layout_constraintTop_toBottomOf="@id/showorder_tv_commodityname" />
+
+        <TextView
+            android:id="@+id/showorder_commoditymoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="商品金额"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="@id/showorder_iv_img"
+            app:layout_constraintTop_toBottomOf="@id/showorder_iv_img" />
+
+        <TextView
+            android:id="@+id/showorder_tv_commoditymoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="￥99.90"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/showorder_commoditymoney" />
+
+        <TextView
+            android:id="@+id/showorder_freight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="运费"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="@id/showorder_commoditymoney"
+            app:layout_constraintTop_toBottomOf="@id/showorder_commoditymoney" />
+
+        <TextView
+            android:id="@+id/showorder_tv_freight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="￥0.00"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/showorder_freight" />
+
+        <TextView
+            android:id="@+id/showorder_subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="小计"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="@id/showorder_freight"
+            app:layout_constraintTop_toBottomOf="@id/showorder_freight" />
+
+        <TextView
+            android:id="@+id/showorder_tv_subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="￥99.90"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/showorder_subtotal" />
+        <TextView
+            android:id="@+id/showorder_discounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="优惠"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="@id/showorder_subtotal"
+            app:layout_constraintTop_toBottomOf="@id/showorder_subtotal" />
+
+        <TextView
+            android:id="@+id/showorder_tv_discounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="-￥0.00"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/showorder_discounts" />
+        <TextView
+            android:id="@+id/showorder_deduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="使用资产抵扣"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="@id/showorder_discounts"
+            app:layout_constraintTop_toBottomOf="@id/showorder_discounts" />
+
+        <TextView
+            android:id="@+id/showorder_tv_deduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="-￥0.00"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/showorder_deduction" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:background="#ffffff"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/showorder_Realpay"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:text="实付"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/showorder_tv_Realpay"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="￥99.90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="订单编号：1186603245125014241"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:text="下单时间：2020-06-09 19：18：55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:text="复制"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/showorder_tv_contactserver"
+        android:background="@drawable/corner_contact_service"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:text="联系客服"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"/>
+</LinearLayout>

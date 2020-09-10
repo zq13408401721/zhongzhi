@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="#000" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:alpha="1" />
+
+    <TextView
+        android:id="@+id/btn_click"
+        android:layout_width="120dp"
+        android:layout_height="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="1"
+        android:background="@drawable/shape_pop_button"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="确定" />
+
+</RelativeLayout>

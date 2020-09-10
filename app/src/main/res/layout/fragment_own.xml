@@ -1,128 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp">
-<!--<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <androidx.constraintlayout.widget.ConstraintLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:background="@drawable/card_style">
-
-
-        <TextView
-            android:id="@+id/evaluate_Individual_stores"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/d20"
-            android:layout_marginTop="@dimen/d5"
-            android:text="阳阳的店 >"
-            android:textColor="#0E0D0D"
-            android:textSize="@dimen/text_size_16"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/evaluate_zuzu_time_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/d5"
-            android:layout_marginEnd="@dimen/d20"
-            android:text="2020-06-09 19：18：55"
-            android:textSize="@dimen/text_size_10"
-            app:layout_constraintBottom_toBottomOf="@id/evaluate_Individual_stores"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/evaluate_zuzu_img"
-            android:layout_width="@dimen/d200"
-            android:layout_height="@dimen/d200"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/evaluate_img_shape"
-            android:src="@mipmap/img_bg"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/evaluate_Individual_stores" />
-
-        <TextView
-            android:id="@+id/evaluate_zuzu_contont_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="MARICE 魅力资女士素颜霜"
-            android:textSize="@dimen/text_size_14"
-            app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
-            app:layout_constraintTop_toTopOf="@+id/evaluate_zuzu_img" />
-
-        <TextView
-            android:id="@+id/evaluate_zuzu_single_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:text="单只   x1"
-            android:textSize="@dimen/text_size_12"
-            app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
-            app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_contont_tv" />
-
-        <TextView
-            android:id="@+id/evaluate_zuzu_price_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-
-            android:text="实付款  ￥  99.90"
-            android:textSize="@dimen/text_size_16"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_img" />
-
-        <Button
-            android:layout_marginBottom="10dp"
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/d50"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/evaluate_button_shape"
-            android:text="评价"
-            android:layout_marginTop="8dp"
-            android:textSize="@dimen/font_size1"
-            app:layout_constraintBottom_toBottomOf="@id/evaluate_zuzu_price_tv"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/evaluate_zuzu_price_tv" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    android:background="#08000000"
+    tools:context=".ui.own.OwnFragment">
     <TextView
-        android:textColor="#E41B0C"
-        android:id="@+id/evaluate_zuzu_like_tv"
+        android:id="@+id/own_text"
+        android:text="我的订单"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="猜你喜欢"
-        android:padding="@dimen/text_size_10"
-        android:layout_gravity="center"
-        android:textSize="@dimen/size_20"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/evaluate_zuzu_rv"
-        />
-
-</LinearLayout>-->
-
-
-</androidx.core.widget.NestedScrollView>
+        android:layout_height="wrap_content"/>
+</LinearLayout>
