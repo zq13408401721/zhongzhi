@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rectangle_shape" />
+
+    <ImageView
+        android:id="@+id/binding_im_head"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/binding_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/binding_im_head"
+        android:text="中国农业银行"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/binding_tv_nature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@+id/binding_im_head"
+        android:text="储蓄卡"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/binding_btn_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="25dp"
+        android:text="**********6302"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>
