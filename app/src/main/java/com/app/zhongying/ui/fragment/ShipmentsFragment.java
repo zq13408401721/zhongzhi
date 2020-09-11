@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.app.zhongying.R;
 import com.app.zhongying.ui.adapter.EvaluateAdapter;
+import com.app.zhongying.ui.adapter.OrderAdapter;
 
 //待收货
 public class ShipmentsFragment extends BaseFragment {
@@ -25,9 +26,13 @@ public class ShipmentsFragment extends BaseFragment {
     @Override
     protected void initView(View view) {
         RecyclerView shipments_rv = view.findViewById(R.id.shipments_rv);
-        shipments_rv.setLayoutManager(new GridLayoutManager(context,2));
+       /* shipments_rv.setLayoutManager(new GridLayoutManager(context,2));
         EvaluateAdapter evaluateAdapter = new EvaluateAdapter(context);
-        shipments_rv.setAdapter(evaluateAdapter);
+        shipments_rv.setAdapter(evaluateAdapter);*/
+
+        shipments_rv.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        OrderAdapter orderAdapter = new OrderAdapter(getActivity());
+        shipments_rv.setAdapter(orderAdapter);
     }
 
     @Override

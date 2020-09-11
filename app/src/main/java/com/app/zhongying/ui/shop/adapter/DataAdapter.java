@@ -1,6 +1,7 @@
 package com.app.zhongying.ui.shop.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ import java.util.List;
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     private List<String> data = new ArrayList<>();
     private Context context;
-
+    private boolean isFirst=true;
     public DataAdapter(Context context) {
         this.context = context;
     }
@@ -38,6 +39,21 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String s = data.get(position);
         holder.mTitle.setText(s);
+
+        holder.mTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isFirst == true) {
+                    holder.mTitle.setBackgroundResource(R.drawable.shape_pop_button);
+                    holder.mTitle.setTextColor(Color.WHITE);
+                    isFirst = false;
+                } else {
+                    holder.mTitle.setBackgroundResource(R.drawable.shape_pop_item);
+                    holder.mTitle.setTextColor(Color.BLACK);
+                    isFirst = true;
+                }
+            }
+        });
     }
 
     @Override

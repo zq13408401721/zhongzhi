@@ -33,7 +33,8 @@
                     android:layout_width="100dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10dp"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/evaluate_img_shape"
                     android:src="@drawable/img_bg2"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/obligation_Username"></ImageView>

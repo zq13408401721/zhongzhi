@@ -46,7 +46,8 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="12dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
+                android:background="@drawable/evaluate_img_shape"
                 android:src="@drawable/img_bg2"
                 app:layout_constraintLeft_toRightOf="@id/allorder_raiobnt"
                 app:layout_constraintTop_toBottomOf="@id/allorder_done" />

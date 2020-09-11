@@ -58,9 +58,9 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ShopBean bean = data.get(position);
-        RoundedCorners roundedCorners = new RoundedCorners(Dp2Px.dip2px(context, 15));
-        RequestOptions requestOptions = RequestOptions.bitmapTransform(roundedCorners);
-        Glide.with(context).load(bean.getUrl()).apply(requestOptions).into(holder.mImg);
+//        RoundedCorners roundedCorners = new RoundedCorners(Dp2Px.dip2px(context, 15));
+//        RequestOptions requestOptions = RequestOptions.bitmapTransform(roundedCorners);
+//        Glide.with(context).load(bean.getUrl()).apply(requestOptions).into(holder.mImg);
         final int[] num = {bean.getNum()};
         holder.shopNum.setText(num[0] + "");
         //点击加号

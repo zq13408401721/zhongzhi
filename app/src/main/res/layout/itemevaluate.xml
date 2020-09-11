@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="@dimen/d8"
+    android:layout_margin="@dimen/dp_4"
     android:layout_height="wrap_content"
     android:background="@drawable/card_style"
     android:elevation="2dp">
@@ -14,15 +14,15 @@
         android:id="@+id/imageView"
         android:background="@drawable/evaluate_img_shape"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/d300"
+        android:layout_height="300dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/img_bg"
       />
 
     <ImageView
         android:id="@+id/item_evaluate_zuanshi_img"
-        android:layout_width="@dimen/d50"
-        android:layout_height="@dimen/d50"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="16dp"
         android:src="@mipmap/zuanshi"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="积分兑换"
-        android:textSize="@dimen/size_8"
+        android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/item_evaluate_zuanshi_img"
         app:layout_constraintStart_toEndOf="@+id/item_evaluate_zuanshi_img"
         app:layout_constraintTop_toTopOf="@+id/item_evaluate_zuanshi_img" />
@@ -49,7 +49,7 @@
         android:layout_marginEnd="6dp"
         android:maxLines="2"
         android:text="蔻翠堂—2020年最新推出护肤套装精选礼盒..."
-        android:textSize="@dimen/text_size_12"
+        android:textSize="@dimen/sp_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_evaluate_zuanshi_img" />

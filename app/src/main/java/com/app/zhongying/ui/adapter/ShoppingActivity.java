@@ -18,8 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zhongying.R;
 
+import com.app.zhongying.ui.shop.activity.LookActivity;
+import com.app.zhongying.ui.shop.activity.ShopCartActivity;
 import com.app.zhongying.ui.shopbean.ShopBean;
-import com.app.zhongying.ui.utils.DP2PXUtils;
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
 import com.youth.banner.loader.ImageLoader;
@@ -32,7 +33,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ShoppingActivity extends AppCompatActivity {
-//1234logt
+    //1234logt
 //商品详情
     private static final String TAG = "ShoppingActivity";
     @BindView(R.id.iv_collect_shop)
@@ -104,13 +105,6 @@ public class ShoppingActivity extends AppCompatActivity {
          * 32px-->11dp
          * */
 
-        int i = DP2PXUtils.dp2px(this, 11l);
-        int i720 = DP2PXUtils.dp2px(this, 85);
-        int i255 = DP2PXUtils.dp2px(this, 75l);
-        Log.d(TAG, "onCreate: " + i);
-        Log.d(TAG, "onCreate7: " + i720);
-        Log.d(TAG, "onCreate7: " + i255);
-
 
         initData();
         setBanner();
@@ -120,9 +114,9 @@ public class ShoppingActivity extends AppCompatActivity {
     private void setBanner() {
         ArrayList<String> banners = new ArrayList<>();
         List imgs = new ArrayList();
-        imgs.add(getStringFromDrawableRes(this,R.drawable.crop__ic_cancel));
-        imgs.add(getStringFromDrawableRes(this,R.drawable.crop__ic_cancel));
-        imgs.add(getStringFromDrawableRes(this,R.drawable.crop__ic_cancel));
+        imgs.add(getStringFromDrawableRes(this, R.drawable.crop__ic_cancel));
+        imgs.add(getStringFromDrawableRes(this, R.drawable.crop__ic_cancel));
+        imgs.add(getStringFromDrawableRes(this, R.drawable.crop__ic_cancel));
         bannerShop.setImages(imgs)
                 .setImageLoader(new ImageLoader() {
                     @Override
@@ -131,6 +125,7 @@ public class ShoppingActivity extends AppCompatActivity {
                     }
                 }).start();
     }
+
     public static String getStringFromDrawableRes(Context context, int id) {
 
         Resources resources = context.getResources();
@@ -161,20 +156,19 @@ public class ShoppingActivity extends AppCompatActivity {
         mAdapter.addDataList(datas);
 
 
-
     }
 
-    @OnClick({R.id.tv_look_shop, R.id.tv_shopCar_shop, R.id.tv_purchase_shop,R.id.iv_finish_shop})
+    @OnClick({R.id.tv_look_shop, R.id.tv_shopCar_shop, R.id.tv_purchase_shop, R.id.iv_finish_shop})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_look_shop:
-                startActivity(new Intent(this,LookActivity.class));
+                startActivity(new Intent(this, purchaseActivity.class));
                 break;
             case R.id.tv_shopCar_shop:
-                startActivity(new Intent(this,ShopCarActivity.class));
+                startActivity(new Intent(this, ShopCartActivity.class));
                 break;
             case R.id.tv_purchase_shop:
-                startActivity(new Intent(this,purchaseActivity.class));
+                startActivity(new Intent(this, LookActivity.class));
                 break;
             case R.id.iv_finish_shop:
                 finish();

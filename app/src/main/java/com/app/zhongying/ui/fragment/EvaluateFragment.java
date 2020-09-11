@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.zhongying.R;
 import com.app.zhongying.ui.adapter.EvaluateAdapter;
+import com.app.zhongying.ui.adapter.OrderAdapter;
 
 public class EvaluateFragment extends Fragment {
 //tv
@@ -42,7 +43,7 @@ public class EvaluateFragment extends Fragment {
     }
 
     private void initView(View view) {
-       /* evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
+        evaluate_Individual_stores = view.findViewById(R.id.evaluate_Individual_stores);
         evaluate_zuzu_time_tv = view.findViewById(R.id.evaluate_zuzu_time_tv);
         evaluate_zuzu_img = view.findViewById(R.id.evaluate_zuzu_img);
         evaluate_zuzu_contont_tv = view.findViewById(R.id.evaluate_zuzu_contont_tv);
@@ -52,10 +53,15 @@ public class EvaluateFragment extends Fragment {
         evaluate_zuzu_like_tv = view.findViewById(R.id.evaluate_zuzu_like_tv);
         evaluate_zuzu_rv = view.findViewById(R.id.evaluate_zuzu_rv);
 
-        evaluate_zuzu_rv.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        /*evaluate_zuzu_rv.setLayoutManager(new GridLayoutManager(getActivity(),2));
 
         EvaluateAdapter evaluateAdapter = new EvaluateAdapter(getActivity());
-        evaluate_zuzu_rv.setAdapter(evaluateAdapter);
+        evaluate_zuzu_rv.setAdapter(evaluateAdapter);*/
+
+        evaluate_zuzu_rv.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        OrderAdapter orderAdapter = new OrderAdapter(getActivity());
+        evaluate_zuzu_rv.setAdapter(orderAdapter);
+
 
        button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +69,6 @@ public class EvaluateFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), EvaluateActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 }

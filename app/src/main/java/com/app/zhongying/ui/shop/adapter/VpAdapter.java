@@ -4,11 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import java.util.ArrayList;
 
 //首页 推荐 页面下面第二部分的 适配器
-public class VpAdapter extends FragmentPagerAdapter {
+public class VpAdapter extends FragmentStatePagerAdapter {
     private ArrayList<Fragment> fragments;
 
     public VpAdapter(@NonNull FragmentManager fm, ArrayList<Fragment> fragments) {

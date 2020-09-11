@@ -1,6 +1,7 @@
 package com.app.zhongying.ui.adapter;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -9,9 +10,11 @@ import java.util.List;
 
 public class MeOrderVpAdapter extends FragmentPagerAdapter {
     List<Fragment>fragments;
-    public MeOrderVpAdapter(@NonNull FragmentManager fm, List<Fragment>fragments) {
+    List<String> strings;
+    public MeOrderVpAdapter(@NonNull FragmentManager fm, List<Fragment>fragments,List<String> strings) {
         super(fm);
         this.fragments = fragments;
+        this.strings = strings;
     }
 
     @NonNull
@@ -23,5 +26,11 @@ public class MeOrderVpAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return fragments.size();
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return strings.get(position);
     }
 }

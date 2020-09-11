@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.zhongying.MainActivity;
 import com.app.zhongying.R;
+
 import com.app.zhongying.ui.adapter.TitlebarView;
 import com.hedgehog.ratingbar.RatingBar;
 
@@ -73,14 +74,14 @@ public class EvaluateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evaluate);
+
         setContentView(R.layout.activity_evaluate2);
         ButterKnife.bind(this);
         initView();
     }
 
     private void initView() {
-        title2.setRightText("发布");
+       title2.setRightText("发布");
 
         title2.setTitle("发表评价");
 
@@ -152,7 +153,7 @@ public class EvaluateActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textView.setVisibility(View.VISIBLE);
                 contentTv.setVisibility(View.GONE);
-                editImg.setVisibility(View.GONE);
+
             }
         });
     }

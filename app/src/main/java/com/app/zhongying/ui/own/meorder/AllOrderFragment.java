@@ -19,7 +19,6 @@ import com.app.zhongying.ui.adapter.AllOrderAdapter;
 public class AllOrderFragment extends Fragment {
 
     private RecyclerView allorder_rv;
-    private Toolbar allorder_toolbar;
 
     @Nullable
     @Override
@@ -32,7 +31,6 @@ public class AllOrderFragment extends Fragment {
 
     private void initView(View inflate) {
         allorder_rv = inflate.findViewById(R.id.allorder_rv);
-        allorder_toolbar = inflate.findViewById(R.id.allorder_toolbar);
         allorder_rv.setLayoutManager(new LinearLayoutManager(getActivity()));
         AllOrderAdapter allOrderAdapter = new AllOrderAdapter(getActivity());
         allorder_rv.setAdapter(allOrderAdapter);

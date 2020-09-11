@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/d10"
+    android:layout_margin="@dimen/dp_5"
     android:orientation="vertical"
     tools:context=".ui.fragment.EvaluateActivity">
 
@@ -13,7 +13,7 @@
         android:id="@+id/title2"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        app:centerTextColor="#302E2E"
+        app:centerTextColor="#130303"
         app:centerTitle="自定义标题"
         app:rightTextColor="#E31818" />
 
@@ -27,8 +27,8 @@
 
         <ImageView
             android:id="@+id/evaluate_zuzu_img"
-            android:layout_width="@dimen/d150"
-            android:layout_height="@dimen/d150"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_75"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/evaluate_img_shape"
@@ -44,7 +44,7 @@
             android:layout_marginTop="16dp"
             android:text="MARICE 魅力资女士素颜霜"
             android:textColor="#2E2E2E"
-            android:textSize="@dimen/text_size_14"
+            android:textSize="@dimen/sp_14"
             app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
             app:layout_constraintTop_toTopOf="@+id/evaluate_zuzu_img" />
 
@@ -55,7 +55,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="类型： 保湿补水 颜色：樱花粉嫩"
-            android:textSize="@dimen/text_size_12"
+            android:textSize="@dimen/sp_10"
             app:layout_constraintStart_toEndOf="@+id/evaluate_zuzu_img"
             app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_contont_tv" />
 
@@ -67,7 +67,7 @@
             android:layout_marginTop="24dp"
             android:text="描述相符"
             android:textColor="#130202"
-            android:textSize="@dimen/text_size_16"
+            android:textSize="@dimen/sp_8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/evaluate_zuzu_img" />
 
@@ -89,8 +89,8 @@
             hedgehog:starEmpty="@mipmap/star_empty"
             hedgehog:starFill="@mipmap/star_full"
             hedgehog:starHalf="@mipmap/star_full"
-            hedgehog:starImageHeight="@dimen/d40"
-            hedgehog:starImageWidth="@dimen/d50" />
+            hedgehog:starImageHeight="@dimen/dp_20"
+            hedgehog:starImageWidth="@dimen/dp_25" />
 <!-- hedgehog:starHalf="@mipmap/star_half"-->
         <TextView
             android:id="@+id/very_good_tv"
@@ -143,8 +143,8 @@
 
         <ImageView
             android:id="@+id/edit_img"
-            android:layout_width="@dimen/d40"
-            android:layout_height="@dimen/d50"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_50"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:src="@mipmap/bi"
@@ -152,25 +152,29 @@
             app:layout_constraintTop_toBottomOf="@id/evaluate_zuzu_price_tv" />
 
         <EditText
+
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/text_size_14"
+            android:layout_height="@dimen/dp_20"
             android:layout_marginTop="18dp"
             android:background="@null"
             android:hint="请输入内容"
-            android:textSize="@dimen/text_size_14"
+            android:layout_marginStart="@dimen/dp_25"
+            android:textSize="@dimen/sp_12"
             android:visibility="invisible"
-            app:layout_constraintTop_toBottomOf="@+id/ratingbar"
-            app:layout_constraintLeft_toLeftOf="@+id/evaluate_zuzu_price_tv"/>
+            app:layout_constraintBottom_toBottomOf="@id/edit_img"
+            app:layout_constraintLeft_toRightOf="@+id/edit_img"
+            app:layout_constraintTop_toTopOf="@id/edit_img"/>
 
         <TextView
             android:id="@+id/content_tv"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/d50"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_50"
             android:text="从多个角度评价宝贝，可以帮助更多想买的人"
             android:textColor="#BDBCBC"
             android:visibility="visible"
+            android:textSize="@dimen/sp_12"
             app:layout_constraintBottom_toBottomOf="@id/edit_img"
             app:layout_constraintStart_toStartOf="@+id/edit_img"
             app:layout_constraintTop_toTopOf="@id/edit_img" />
@@ -179,7 +183,7 @@
             android:id="@+id/jiahao_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/d200"
+            android:layout_marginTop="@dimen/dp_30"
             android:src="@mipmap/jiahao2"
             app:layout_constraintLeft_toLeftOf="@id/edit_img"
             app:layout_constraintTop_toBottomOf="@id/content_tv" />
@@ -189,8 +193,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="@dimen/d12"
-            android:layout_marginBottom="@dimen/d12"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginBottom="@dimen/dp_6"
             android:text="公开"
             android:textColor="#DD2525"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -202,7 +206,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="@dimen/d12"
+            android:layout_marginBottom="@dimen/dp_12"
             android:text="公开头像昵称，大家可以看到我主页"
             android:textColor="#BDBCBC"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -214,7 +218,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/d10"
+        android:layout_marginTop="@dimen/dp_10"
         android:elevation="2dp"
         android:background="@drawable/card_style">
 
@@ -226,7 +230,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="阳阳的店"
-            android:textSize="@dimen/text_size_16"
+            android:textSize="@dimen/sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -239,7 +243,7 @@
             android:layout_marginTop="16dp"
             android:text="物流服务"
             android:textColor="#131313"
-            android:textSize="@dimen/text_size_16"
+            android:textSize="@dimen/sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -251,7 +255,7 @@
             android:layout_marginTop="16dp"
             android:text="服务态度"
             android:textColor="#131313"
-            android:textSize="@dimen/text_size_16"
+            android:textSize="@dimen/sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -273,8 +277,8 @@
             hedgehog:starEmpty="@mipmap/star_empty"
             hedgehog:starFill="@mipmap/star_full"
             hedgehog:starHalf="@mipmap/star_full"
-            hedgehog:starImageHeight="@dimen/d40"
-            hedgehog:starImageWidth="@dimen/d50" />
+            hedgehog:starImageHeight="@dimen/dp_20"
+            hedgehog:starImageWidth="@dimen/dp_25" />
 <!--      hedgehog:starHalf="@mipmap/star_half"-->
         <com.hedgehog.ratingbar.RatingBar
             android:id="@+id/xing_tv2"
@@ -294,8 +298,8 @@
             hedgehog:starEmpty="@mipmap/star_empty"
             hedgehog:starFill="@mipmap/star_full"
             hedgehog:starHalf="@mipmap/star_full"
-            hedgehog:starImageHeight="@dimen/d40"
-            hedgehog:starImageWidth="@dimen/d50" />
+            hedgehog:starImageHeight="@dimen/dp_20"
+            hedgehog:starImageWidth="@dimen/dp_25" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 <!--hedgehog:starHalf="@mipmap/star_half"-->
 </LinearLayout>
