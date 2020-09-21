@@ -101,6 +101,7 @@ public class RecommendActivity extends AppCompatActivity {
         tab.getTabAt(2).setText("文创");
         tab.getTabAt(3).setText("文旅");
         tab.getTabAt(4).setText("影视");
+
     }
 
 
