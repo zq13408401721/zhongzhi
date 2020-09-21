@@ -19,6 +19,7 @@ public class BindingFragment extends Fragment {
 
     private ImageView binding_im_gary;
     private ImageView binding_im_add;
+    private TextView binding_btn_experience;
     //private RecyclerView binding_rv;
 
     public BindingFragment() {
@@ -48,6 +49,7 @@ public class BindingFragment extends Fragment {
     }
 
     private void initView() {
+        binding_btn_experience = getActivity().findViewById(R.id.binding_btn_experience);
         //binding_rv = getActivity().findViewById(R.id.binding_rv);
         binding_im_add = getActivity().findViewById(R.id.binding_im_add);
         binding_im_add.setOnClickListener(new View.OnClickListener() {
